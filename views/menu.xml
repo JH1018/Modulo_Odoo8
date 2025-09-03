@@ -1,0 +1,19 @@
+<openerp>
+<data>
+    <record id="action_opciones" model="ir.actions.act_window">
+        <field name="name">Opciones</field>
+        <field name="res_model">res.partner</field>
+        <field name="view_type">form</field>
+        <field name="view_mode">tree,form</field>
+        <field name="target">current</field>
+    </record>
+
+    <menuitem id="menu_desplegable" name="☰" sequence="1"/>
+    <menuitem id="submenu_opciones" name="Opciones" parent="menu_desplegable" action="action_opciones"/>
+    <template id="menu_desplegable_assets" inherit_id="web.assets_backend">
+        <xpath expr="." position="inside">
+            <script type="text/javascript" src="/menu_desplegable/static/js/hide_sidebar.js"/>
+        </xpath>
+    </template>
+</data>
+</openerp>
