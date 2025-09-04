@@ -6,6 +6,7 @@ class Student(osv.osv):
 
     _columns = {
         "name": fields.char("Name", required=True, size=64),
+        "profile_picture": fields.binary("Profile Picture"),
         "age": fields.integer("Age", required=True),
         "address": fields.char("Address", size=256),
         "section": fields.char("Section", required=True, size=1),

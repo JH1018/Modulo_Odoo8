@@ -1,19 +1,32 @@
 <openerp>
 <data>
-    <record id="action_opciones" model="ir.actions.act_window">
-        <field name="name">Opciones</field>
-        <field name="res_model">res.partner</field>
+
+    <record id="action_administrador" model="ir.actions.act_window">
+        <field name="name">Administración</field>
+        <field name="res_model">odooeduconnect_student</field>
         <field name="view_type">form</field>
         <field name="view_mode">tree,form</field>
         <field name="target">current</field>
     </record>
 
-    <menuitem id="menu_desplegable" name="☰" sequence="1"/>
-    <menuitem id="submenu_opciones" name="Opciones" parent="menu_desplegable" action="action_opciones"/>
-    <template id="menu_desplegable_assets" inherit_id="web.assets_backend">
-        <xpath expr="." position="inside">
-            <script type="text/javascript" src="/menu_desplegable/static/js/hide_sidebar.js"/>
-        </xpath>
-    </template>
+    <record id="action_administrador_form_view_custom1" model="ir.actions.act_window.view">
+        <field name="act_window_id" ref="action_administrador"/>
+        <field name="view_mode">form</field>
+        <field name="view_id" ref="view_student_form_custom1"/>
+    </record>
+
+    <menuitem
+        id="menu_estudiantes"
+        name="Estudiantes"
+        parent="menu_desplegable"
+        action="action_administrador"
+    />
+
+
+    <menuitem id="menu_desplegable" name="Administración" sequence="1"/>
+
+    <menuitem id="submenu_configuracion" name="Configuración" parent="menu_desplegable"/>
+    <menuitem id="submenu_administrador" name="Administradores" parent="submenu_configuracion" action="action_administrador"/>
+
 </data>
 </openerp>

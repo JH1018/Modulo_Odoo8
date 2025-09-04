@@ -1,0 +1,46 @@
+<openerp>
+    <data>
+        <record id="view_student_form_custom1" model="ir.ui.view">
+            <field name="name">student.form.custom1</field>
+            <field name="model">odooeduconnect_student</field>
+            <field name="arch" type="xml">
+                <form string="Student">
+                    <sheet class="oe_form_sheet">
+                        <group>
+                            <group>
+                                <field name="profile_picture" widget="image" class="oe_avatar" style="height:120px;width:120px"/>
+                            </group>
+                            <group>
+                                <field name="name" placeholder="Nombre completo"/>
+                                <field name="student_card" placeholder="Carnet de estudiante"/>
+                            </group>
+                        </group>
+                        <notebook>
+                            <page string="Información General">
+                                <group>
+                                    <group>
+                                        <field name="age" placeholder="Edad"/>
+                                        <field name="section" placeholder="Sección"/>
+                                        <field name="grade" placeholder="Grado"/>
+                                    </group>
+                                    <group>
+                                        <field name="email" placeholder="Correo electrónico"/>
+                                        <field name="phone" placeholder="Teléfono"/>
+                                        <field name="address" placeholder="Dirección"/>
+                                    </group>
+                                </group>
+                            </page>
+                            <page string="Académico">
+                                <group>
+                                    <field name="room_id" placeholder="Aula"/>
+                                    <field name="subjects" widget="many2many_tags"/>
+                                </group>
+                            </page>
+                        </notebook>
+                        <div class="oe_clear"/>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+    </data>
+</openerp>
