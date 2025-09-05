@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<openerp>
+    <data>
+        <record id="view_grade_form_custom1" model="ir.ui.view">
+            <field name="name">grade.form</field>
+            <field name="model">odooeduconnect_grade</field>
+            <field name="arch" type="xml">
+                <form string="Calificación del Estudiante">
+                    <sheet>
+                        <div class="oe_title">
+                            <h1>
+                                <label string="Registro de Calificación" class="oe_edit_only"/>
+                            </h1>
+                        </div>
+                        <group>
+                            <group>
+                                <field name="student_id" 
+                                    domain="[]" 
+                                    string="Carnet de estudiante" 
+                                    required="1"
+                                    class="oe_inline"
+                                    options="{'no_create': True, 'no_open': True}"/>
+                            </group>
+                            <group>
+                                <field name="subject_id" 
+                                    domain="[]" 
+                                    string="Seleccione la materia" 
+                                    required="1"
+                                    class="oe_inline"
+                                    options="{'no_create': True, 'no_open': True}"/>
+                            </group>
+                        </group>
+                        <group>
+                            <group>
+                                <field name="score" 
+                                    string="Ingrese la calificación" 
+                                    required="1"
+                                    class="oe_inline"
+                                    widget="float"/>
+                            </group>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+    </data>
+</openerp>

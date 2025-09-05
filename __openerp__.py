@@ -8,6 +8,9 @@
     'website': 'https://github.com/JH1018/Modulo_Odoo8',
     'depends': ['base'],
     'data': [
+        'views/subject/tree_subject.xml',
+        'views/subject/registerSubjectView.xml',
+        'views/grades/registerGradesView.xml',
         'views/room/tree_room.xml',
         'views/room/registerRoomView.xml',
         'views/students/tree_student.xml',

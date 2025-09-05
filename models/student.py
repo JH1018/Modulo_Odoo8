@@ -21,5 +21,6 @@ class Student(osv.osv):
             'subject_id',
             string='Subjects'
         ),
-        "room_id": fields.many2one('odooeduconnect_room', 'Room', required=False)
+        "room_id": fields.many2one('odooeduconnect_room', 'Room', required=False),
+        "grades_ids": fields.one2many('odooeduconnect_grade', 'student_id', 'Grades'),
     }
