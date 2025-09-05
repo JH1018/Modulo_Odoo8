@@ -1,0 +1,15 @@
+<openerp>
+    <data>
+        <record id="view_room_tree_custom1" model="ir.ui.view">
+            <field name="name">room.tree.custom1</field>
+            <field name="model">odooeduconnect_room</field>
+            <field name="arch" type="xml">
+                <tree string="Room">
+                    <field name="name"/>
+                    <field name="capacity"/>
+                    <field name="students"/>
+                </tree>
+            </field>
+        </record>
+    </data>
+</openerp>
