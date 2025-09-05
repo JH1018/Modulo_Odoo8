@@ -32,7 +32,7 @@
                             </page>
                             <page string="Académico">
                                 <group>
-                                    <field name="room_id" placeholder="Aula"/>
+                                    <field name="room_id" placeholder="Aula" required="0"/>
                                     <field name="subjects" widget="many2many_tags"/>
                                 </group>
                             </page>

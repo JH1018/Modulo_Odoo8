@@ -7,5 +7,11 @@ class Room(osv.osv):
     _columns = {
         "name": fields.char("Name", required=True, size=64),
         "capacity": fields.integer("Capacity", required=True),
-        "students": fields.one2many('odooeduconnect_student', 'room_id', 'Students')
+        "students": fields.many2many(
+            'odooeduconnect_student',   
+            'room_student_rel',         
+            'room_id',                  
+            'student_id',               
+            'Students'                  
+        ),
     }
