@@ -1,0 +1,25 @@
+<openerp>
+    <data>
+        <record id="view_student_search_custom1" model="ir.ui.view">
+            <field name="name">student.search.custom1</field>
+            <field name="model">odooeduconnect_student</field>
+            <field name="arch" type="xml">
+                <search string="Buscar Estudiantes">
+                    <field name="name" string="Nombre"/>
+                    <field name="student_card" string="Carnet de Estudiante"/>
+                    <filter string="Con Materias" name="has_subjects" domain="[('subjects','!=',False)]"/>
+                    <filter string="Sin Materias" name="no_subjects" domain="[('subjects','=',False)]"/>
+                    <filter string="Con Salón" name="has_room" domain="[('room_id','!=',False)]"/>
+                    <filter string="Sin Salón" name="no_room" domain="[('room_id','=',False)]"/>
+                    <filter string="Con Notas" name="has_grades" domain="[('grades_ids','!=',False)]"/>
+                    <filter string="Sin Notas" name="no_grades" domain="[('grades_ids','=',False)]"/>
+                    <separator/>
+                    <group expand="0" string="Group By">
+                        <filter string="Por Grado" context="{'group_by':'grade'}"/>
+                        <filter string="Por Sección" context="{'group_by':'section'}"/>
+                    </group>
+                </search>
+            </field>
+        </record>
+    </data>
+</openerp>

@@ -8,6 +8,7 @@
             <field name="view_type">form</field>
             <field name="view_mode">tree,form</field>
             <field name="view_id" ref="view_student_tree_custom1"/>
+            <field name="search_view_id" ref="Modulo_Odoo8.view_student_search_custom1"/>
             <field name="target">current</field>
         </record>
 

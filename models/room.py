@@ -12,6 +12,13 @@ class Room(osv.osv):
             'room_student_rel',         
             'room_id',                  
             'student_id',               
-            'Students'                  
+            'Students',
+            ondelete='set null'                  
         ),
+        "subject_id": fields.one2many(
+            'odooeduconnect_subject',  
+            'room_id',                  
+            'Subjects',
+        ),
+        
     }
