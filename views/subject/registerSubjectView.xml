@@ -33,9 +33,6 @@
                                     </tree>
                                 </field>
                             </page>
-                            <page string="Calificaciones">
-                                <field name="grades_ids"/>
-                            </page>
                         </notebook>
                     </sheet>
                 </form>

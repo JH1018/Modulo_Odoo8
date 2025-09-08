@@ -8,7 +8,7 @@ class Subject(osv.osv):
         "name": fields.char("Name", required=True, size=64),
         "code": fields.char("Code", required=True, size=10),
         "description": fields.text("Description"),
-        "room_id": fields.many2one('odooeduconnect_room', 'Room', required=True),
+        "room_id": fields.many2one('odooeduconnect_room', 'Room', required=True, ondelete='set null'),
         "students": fields.many2many(
             'odooeduconnect_student',
             'student_subject_rel',
@@ -16,5 +16,5 @@ class Subject(osv.osv):
             'student_id',
             string='Students'
         ),
-        "grades_ids": fields.one2many('odooeduconnect_grade', 'subject_id', 'Grades'),
+        "subject_id": fields.many2one('odooeduconnect_subject', 'Subject', required=True, ondelete='set null'),
     }

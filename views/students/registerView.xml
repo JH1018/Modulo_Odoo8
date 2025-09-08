@@ -36,6 +36,16 @@
                                     <field name="subjects" widget="many2many_tags"/>
                                 </group>
                             </page>
+                            <page string="Notas">
+                                <group>
+                                    <field name="grades_ids" widget="one2many" options="{'no_create': True}">
+                                        <tree string="Notas" editable="false">
+                                            <field name="subject_id"/>
+                                            <field name="score"/>
+                                        </tree>
+                                    </field>
+                                </group>
+                            </page>
                         </notebook>
                         <div class="oe_clear"/>
                     </sheet>

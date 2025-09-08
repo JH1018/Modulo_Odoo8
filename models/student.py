@@ -19,8 +19,37 @@ class Student(osv.osv):
             'student_subject_rel',
             'student_id',
             'subject_id',
-            string='Subjects'
+            string='Subjects',
         ),
-        "room_id": fields.many2one('odooeduconnect_room', 'Room', required=False),
-        "grades_ids": fields.one2many('odooeduconnect_grade', 'student_id', 'Grades'),
+        "room_id": fields.many2one('odooeduconnect_room', 'Room', required=False, ondelete='set null'),
+        "grades_ids": fields.one2many('odooeduconnect_grade', 'student_id', 'Grades', ondelete='cascade'),
     }
+    
+    def name_get(self, cr, uid, ids, context=None):
+        if not ids:
+            return []
+        res = []
+        for student in self.browse(cr, uid, ids, context=context):
+            display_name = "%s - %s" % (student.name, student.student_card)
+            res.append((student.id, display_name))
+        return res
+    
+    def unlink(self, cr, uid, ids, context=None):
+        if context is None:
+            context = {}
+            
+        grade_obj = self.pool.get('odooeduconnect_grade')
+        
+        for student_id in ids:
+            grade_ids = grade_obj.search(cr, uid, [
+                ('student_id', '=', student_id)
+            ], context=context)
+            
+            if grade_ids:
+                try:
+                    grade_obj.unlink(cr, uid, grade_ids, context=context)
+                except Exception as e:
+                    raise osv.except_osv(('Error!'), 
+                        ('No se pudieron eliminar las notas del estudiante. Error: %s' % str(e)))
+                    
+        return super(Student, self).unlink(cr, uid, ids, context)

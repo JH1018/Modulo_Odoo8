@@ -55,8 +55,14 @@
             <field name="res_model">odooeduconnect_grade</field>
             <field name="view_type">form</field>
             <field name="view_mode">tree,form</field>
-            <field name="view_id" ref="view_grade_form_custom1"/>
+            <field name="view_id" ref="view_grade_tree_custom1"/>
             <field name="target">current</field>
+        </record>
+
+        <record id="action_administrador_grades_form_view_custom1" model="ir.actions.act_window.view">
+            <field name="act_window_id" ref="action_administrador_notas"/>
+            <field name="view_mode">form</field>
+            <field name="view_id" ref="view_grade_form_custom1"/>
         </record>
 
         <!-- Menús -->
@@ -75,9 +81,8 @@
         <menuitem id="submenu_clases" name="Gestión de Clases" parent="submenu_clases_principal" action="action_administrador_clases"/>
 
         <!-- Notas -->
-        <menuitem id="submenu_notas_principal" name="Clases" parent="menu_desplegable"/>
+        <menuitem id="submenu_notas_principal" name="Notas" parent="menu_desplegable"/>
         <menuitem id="submenu_notas" name="Gestión de Notas" parent="submenu_notas_principal" action="action_administrador_notas"/>
-
 
     </data>
 </openerp>
