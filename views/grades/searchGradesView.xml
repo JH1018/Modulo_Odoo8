@@ -1,0 +1,24 @@
+<openerp>
+    <data>
+        <record id="view_grade_search_custom1" model="ir.ui.view">
+            <field name="name">grade.search.custom1</field>
+            <field name="model">odooeduconnect_grade</field>
+            <field name="arch" type="xml">
+                <search string="Buscar Calificaciones">
+                    <field name="score" string="Puntaje"/>
+                    <field name="student_id" string="Estudiante"/>
+                    <field name="subject_id" string="Asignatura"/>
+                    <filter string="Con Puntaje" name="has_score" domain="[('score','!=',False)]"/>
+                    <filter string="Sin Puntaje" name="no_score" domain="[('score','=',False)]"/>
+                    <filter string="Aprobadas" name="passed" domain="[('score','&gt;=',60)]"/>
+                    <filter string="Reprobadas" name="failed" domain="[('score','&lt;',60)]"/>
+                    <separator/>
+                    <group expand="0" string="Agrupar Por">
+                        <filter string="Por Estudiante" context="{'group_by':'student_id'}"/>
+                        <filter string="Por Asignatura" context="{'group_by':'subject_id'}"/>
+                    </group>
+                </search>
+            </field>
+        </record>
+    </data>
+</openerp>

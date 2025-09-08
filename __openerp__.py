@@ -10,10 +10,13 @@
         'views/students/searchView.xml',
         'views/students/tree_student.xml',
         'views/students/registerView.xml',
+        "views/grades/searchGradesView.xml",
         'views/grades/tree_grades.xml',
         'views/grades/registerGradesView.xml',
+        'views/subject/searchRegisterView.xml',
         'views/subject/tree_subject.xml',
         'views/subject/registerSubjectView.xml',
+        'views/room/searchRoomView.xml',
         'views/room/tree_room.xml',
         'views/room/registerRoomView.xml',
         'views/menu.xml'
