@@ -1,0 +1,44 @@
+<openerp>
+    <data>
+        <record id="view_teacher_form_custom1" model="ir.ui.view">
+            <field name="name">teacher.form.custom1</field>
+            <field name="model">odooeduconnect_teacher</field>
+            <field name="arch" type="xml">
+                <form string="Teacher">
+                    <sheet class="oe_form_sheet">
+                        <group>
+                            <group>
+                                <field name="profile_picture" widget="image" class="oe_avatar" style="height:120px;width:120px"/>
+                            </group>
+                        </group>
+                        <notebook>
+                            <page string="Información General">
+                                <group>
+                                    <group>
+                                        <field name="name" placeholder="Nombre completo"/>
+                                        <field name="email" placeholder="Correo electrónico"/>
+                                        <field name="age" placeholder="Edad"/>
+                                    </group>
+                                    <group>
+                                        <field name="address" placeholder="Dirección"/>
+                                        <field name="phone" placeholder="Teléfono"/>
+                                    </group>
+                                </group>
+                            </page>
+                            <page string="Materias">
+                                <field name="subject_ids" widget="many2many" options="{'no_create': True}">
+                                    <tree string="Materias" editable="false">
+                                        <field name="name"/>
+                                        <field name="code"/>
+                                        <field name="room_id"/>
+                                    </tree>
+                                </field>
+                            </page>
+                        </notebook>
+                        <div class="oe_clear"/>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+    </data>
+</openerp>

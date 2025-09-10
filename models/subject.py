@@ -16,4 +16,9 @@ class Subject(osv.osv):
             'student_id',
             string='Students',
         ),
+        "teacher_id": fields.many2one(
+            'odooeduconnect_teacher',
+            'Teacher',
+            ondelete='cascade'
+        ),
     }

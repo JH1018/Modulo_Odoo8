@@ -2,7 +2,7 @@
 <openerp>
     <data>
         <record id="view_subject_form_custom1" model="ir.ui.view">
-            <field name="name">subject.form</field>
+            <field name="name">subject.form.custom1</field>
             <field name="model">odooeduconnect_subject</field>
             <field name="arch" type="xml">
                 <form string="Materia">
@@ -29,6 +29,14 @@
                                         <field name="student_card"/>
                                         <field name="section"/>
                                         <field name="grade"/>
+                                        <field name="email"/>
+                                    </tree>
+                                </field>
+                            </page>
+                            <page string="Maestros">
+                                <field name="teacher_id" widget="many2many" options="{'no_create': True}">
+                                    <tree string="Maestros de esta materia" editable="false">
+                                        <field name="name"/>
                                         <field name="email"/>
                                     </tree>
                                 </field>
