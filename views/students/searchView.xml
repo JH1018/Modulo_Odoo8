@@ -9,8 +9,6 @@
                     <field name="student_card" string="Carnet de Estudiante"/>
                     <filter string="Con Materias" name="has_subjects" domain="[('subjects','!=',False)]"/>
                     <filter string="Sin Materias" name="no_subjects" domain="[('subjects','=',False)]"/>
-                    <filter string="Con Salón" name="has_room" domain="[('room_id','!=',False)]"/>
-                    <filter string="Sin Salón" name="no_room" domain="[('room_id','=',False)]"/>
                     <filter string="Con Notas" name="has_grades" domain="[('grades_ids','!=',False)]"/>
                     <filter string="Sin Notas" name="no_grades" domain="[('grades_ids','=',False)]"/>
                     <separator/>

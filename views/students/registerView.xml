@@ -12,7 +12,8 @@
                             </group>
                             <group>
                                 <field name="name" placeholder="Nombre completo"/>
-                                <field name="student_card" placeholder="Carnet de estudiante"/>
+                                <field name="prefix" placeholder="Prefijo (3 letras)"/>
+                                <field name="student_card" readonly="1" placeholder="ID Card"/>
                             </group>
                         </group>
                         <notebook>
@@ -32,7 +33,6 @@
                             </page>
                             <page string="Académico">
                                 <group>
-                                    <field name="room_id" placeholder="Aula" required="0"/>
                                     <field name="subjects" widget="many2many_tags"/>
                                 </group>
                             </page>

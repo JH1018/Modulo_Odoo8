@@ -13,7 +13,7 @@
                     <field name="email"/>
                     <field name="phone"/>
                     <field name="address"/>
-                    <field name="room_id"/>
+                    <field name="subjects"/>
                 </tree>
             </field>
         </record>

@@ -1,4 +1,5 @@
 from openerp.osv import osv, fields
+from openerp.tools.translate import _
 
 class Student(osv.osv):
     _name = "odooeduconnect_student"
@@ -13,7 +14,8 @@ class Student(osv.osv):
         "grade": fields.integer("Grade", required=True),
         "email": fields.char("Email", required=True, size=128),
         "phone": fields.char("Phone", required=True, size=8),
-        "student_card": fields.char("ID Card", required=True, size=10),
+        "prefix": fields.char("Prefijo", required=True, size=3),
+        "student_card": fields.char("ID Card", readonly=True, size=10),
         "subjects": fields.many2many(
             'odooeduconnect_subject',
             'student_subject_rel',
@@ -21,35 +23,26 @@ class Student(osv.osv):
             'subject_id',
             string='Subjects',
         ),
-        "room_id": fields.many2one('odooeduconnect_room', 'Room', required=False, ondelete='set null'),
+        "room_id": fields.many2one('odooeduconnect_room', 'Room', ondelete='set null'),
         "grades_ids": fields.one2many('odooeduconnect_grade', 'student_id', 'Grades', ondelete='cascade'),
     }
-    
+
+    def create(self, cr, uid, vals, context=None):
+        if 'prefix' in vals:
+            prefix = vals['prefix'].upper()
+            existing_ids = self.search(cr, uid, [('student_card', 'ilike', prefix + '%')], context=context)
+            max_seq = 0
+            for student in self.browse(cr, uid, existing_ids, context=context):
+                num_part = student.student_card[3:]
+                if num_part.isdigit():
+                    max_seq = max(max_seq, int(num_part))
+            next_seq = max_seq + 1
+            vals['student_card'] = prefix + str(next_seq).zfill(7)
+
+        return super(Student, self).create(cr, uid, vals, context=context)
+
     def name_get(self, cr, uid, ids, context=None):
-        if not ids:
-            return []
         res = []
         for student in self.browse(cr, uid, ids, context=context):
-            display_name = "%s - %s" % (student.name, student.student_card)
-            res.append((student.id, display_name))
+            res.append((student.id, "%s - %s" % (student.name, student.student_card)))
         return res
-    
-    def unlink(self, cr, uid, ids, context=None):
-        if context is None:
-            context = {}
-            
-        grade_obj = self.pool.get('odooeduconnect_grade')
-        
-        for student_id in ids:
-            grade_ids = grade_obj.search(cr, uid, [
-                ('student_id', '=', student_id)
-            ], context=context)
-            
-            if grade_ids:
-                try:
-                    grade_obj.unlink(cr, uid, grade_ids, context=context)
-                except Exception as e:
-                    raise osv.except_osv(('Error!'), 
-                        ('No se pudieron eliminar las notas del estudiante. Error: %s' % str(e)))
-                    
-        return super(Student, self).unlink(cr, uid, ids, context)
