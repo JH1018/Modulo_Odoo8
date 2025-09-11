@@ -7,6 +7,9 @@
     'website': 'https://github.com/JH1018/Modulo_Odoo8',
     'depends': ['base'],
     'data': [
+        'security/security.xml',
+        'security/student_rules.xml',
+        'security/ir.model.access.csv',
         'views/teacher/searchRegisterView.xml',
         'views/teacher/tree_teacher.xml',
         'views/teacher/registerTeacherView.xml',

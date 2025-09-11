@@ -34,7 +34,7 @@
                                 </field>
                             </page>
                             <page string="Maestros">
-                                <field name="teacher_id" widget="many2many" options="{'no_create': True}">
+                                <field name="teacher_id" widget="many2one" options="{'no_create': True}">
                                     <tree string="Maestros de esta materia" editable="false">
                                         <field name="name"/>
                                         <field name="email"/>

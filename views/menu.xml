@@ -16,7 +16,7 @@
             <field name="act_window_id" ref="action_administrador"/>
             <field name="view_mode">form</field>
             <field name="view_id" ref="view_student_form_custom1"/>
-        </record>
+        </record>	
 
         <!-- Acción Maestros -->
         <record id="action_administrador_maestros" model="ir.actions.act_window">
@@ -29,7 +29,7 @@
             <field name="target">current</field>
         </record>
 
-        <record id="action_administrador_form_view_custom1" model="ir.actions.act_window.view">
+        <record id="action_administrador_form_view_custom1_teacher" model="ir.actions.act_window.view">
             <field name="act_window_id" ref="action_administrador_maestros"/>
             <field name="view_mode">form</field>
             <field name="view_id" ref="view_teacher_form_custom1"/>
@@ -86,28 +86,38 @@
             <field name="view_id" ref="view_grade_form_custom1"/>
         </record>
 
-        <!-- Menús -->
+        <!-- MENÚS -->
         <menuitem id="menu_desplegable" name="Administración" sequence="1"/>
 
         <!-- Estudiantes -->
         <menuitem id="submenu_estudiantes_principal" name="Estudiantes" parent="menu_desplegable"/>
-        <menuitem id="submenu_estudiantes" name="Gestión de Estudiantes" parent="submenu_estudiantes_principal" action="action_administrador"/>
+        <menuitem id="submenu_estudiantes" name="Gestión de Estudiantes" parent="submenu_estudiantes_principal"
+                action="action_administrador" 
+                groups="Modulo_Odoo8.group_estudiante,Modulo_Odoo8.group_profesor,base.group_system"/>
 
         <!-- Maestros -->
         <menuitem id="submenu_maestros_principal" name="Maestros" parent="menu_desplegable"/>
-        <menuitem id="submenu_maestros" name="Gestión de Maestros" parent="submenu_maestros_principal" action="action_administrador_maestros"/>
+        <menuitem id="submenu_maestros" name="Gestión de Maestros" parent="submenu_maestros_principal"
+                action="action_administrador_maestros"
+                groups="Modulo_Odoo8.group_profesor,base.group_system"/>
 
         <!-- Salones -->
         <menuitem id="submenu_salon_principal" name="Salones" parent="menu_desplegable"/>
-        <menuitem id="submenu_salon" name="Gestión de Salones" parent="submenu_salon_principal" action="action_administrador_salon"/>
+        <menuitem id="submenu_salon" name="Gestión de Salones" parent="submenu_salon_principal" 
+                action="action_administrador_salon"
+                groups="base.group_system,Modulo_Odoo8.group_profesor"/>
 
         <!-- Clases -->
         <menuitem id="submenu_clases_principal" name="Clases" parent="menu_desplegable"/>
-        <menuitem id="submenu_clases" name="Gestión de Clases" parent="submenu_clases_principal" action="action_administrador_clases"/>
+        <menuitem id="submenu_clases" name="Gestión de Clases" parent="submenu_clases_principal"
+                action="action_administrador_clases"
+                groups="base.group_system,Modulo_Odoo8.group_profesor"/>
 
         <!-- Notas -->
         <menuitem id="submenu_notas_principal" name="Notas" parent="menu_desplegable"/>
-        <menuitem id="submenu_notas" name="Gestión de Notas" parent="submenu_notas_principal" action="action_administrador_notas"/>
+        <menuitem id="submenu_notas" name="Gestión de Notas" parent="submenu_notas_principal"
+                action="action_administrador_notas"
+                groups="Modulo_Odoo8.group_estudiante,Modulo_Odoo8.group_profesor,base.group_system"/>
 
     </data>
 </openerp>

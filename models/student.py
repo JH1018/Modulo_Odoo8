@@ -13,7 +13,8 @@ class Student(osv.osv):
         "section": fields.char("Section", required=True, size=1),
         "grade": fields.integer("Grade", required=True),
         "email": fields.char("Email", required=True, size=128),
-        "phone": fields.char("Phone", required=True, size=8),
+        "password": fields.char("Password", required=True, size=64),
+        "phone": fields.integer("Phone", required=True, size=8),
         "prefix": fields.char("Prefijo", required=True, size=3),
         "student_card": fields.char("ID Card", readonly=True, size=10),
         "subjects": fields.many2many(
@@ -33,16 +34,42 @@ class Student(osv.osv):
             existing_ids = self.search(cr, uid, [('student_card', 'ilike', prefix + '%')], context=context)
             max_seq = 0
             for student in self.browse(cr, uid, existing_ids, context=context):
-                num_part = student.student_card[3:]
+                num_part = str(student.student_card or '')[3:]
                 if num_part.isdigit():
                     max_seq = max(max_seq, int(num_part))
             next_seq = max_seq + 1
-            vals['student_card'] = prefix + str(next_seq).zfill(7)
+            vals['student_card'] = prefix + str(next_seq).zfill(4)
+            vals['password'] = vals['student_card']
 
-        return super(Student, self).create(cr, uid, vals, context=context)
+        student_id = super(Student, self).create(cr, uid, vals, context=context)
 
-    def name_get(self, cr, uid, ids, context=None):
-        res = []
+        user_obj = self.pool.get('res.users')
+        group_obj = self.pool.get('res.groups')
+        group_ids = group_obj.search(cr, uid, [('name', '=', 'Estudiante')], context=context)
+
+        user_vals = {
+            'name': vals['name'],
+            'login': vals['email'],
+            'password': vals['password'],
+            'groups_id': [(6, 0, group_ids)]
+        }
+        user_obj.create(cr, uid, user_vals, context=context)
+
+        return student_id
+
+    def write(self, cr, uid, ids, vals, context=None):
+        res = super(Student, self).write(cr, uid, ids, vals, context=context)
+
+        user_obj = self.pool.get('res.users')
+
         for student in self.browse(cr, uid, ids, context=context):
-            res.append((student.id, "%s - %s" % (student.name, student.student_card)))
+            user_ids = user_obj.search(cr, uid, [('login', '=', student.email)], context=context)
+            if user_ids:
+                user_vals = {}
+                if 'email' in vals:
+                    user_vals['login'] = vals['email']
+                    user_vals['password'] = student.student_card
+                if user_vals:
+                    user_obj.write(cr, uid, user_ids, user_vals, context=context)
+
         return res

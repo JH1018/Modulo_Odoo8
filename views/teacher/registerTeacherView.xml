@@ -17,6 +17,7 @@
                                     <group>
                                         <field name="name" placeholder="Nombre completo"/>
                                         <field name="email" placeholder="Correo electrónico"/>
+                                        <field name="password" placeholder="Contraseña"/>
                                         <field name="age" placeholder="Edad"/>
                                     </group>
                                     <group>
