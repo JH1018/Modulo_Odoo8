@@ -16,7 +16,7 @@
         'views/students/searchView.xml',
         'views/students/tree_student.xml',
         'views/students/registerView.xml',
-        "views/grades/searchGradesView.xml",
+        'views/grades/searchGradesView.xml',
         'views/grades/tree_grades.xml',
         'views/grades/registerGradesView.xml',
         'views/subject/searchRegisterView.xml',
@@ -25,8 +25,13 @@
         'views/room/searchRoomView.xml',
         'views/room/tree_room.xml',
         'views/room/registerRoomView.xml',
-        'views/menu.xml'
+        'views/menu.xml',
+        'wizard/student_export_wizard_view.xml',
+        'report/student_report.xml',
     ],
     'installable': True,
     'auto_install': False,
+    'external_dependencies': {
+        'python': ['reportlab'],
+    },
 }
