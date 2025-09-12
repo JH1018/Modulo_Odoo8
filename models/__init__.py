@@ -4,3 +4,7 @@ import room
 import grade
 import teacher
 import student_export_wizard
+import teacher_export_wizard
+import subject_export_wizard
+import grade_export_wizard
+import room_export_wizard
