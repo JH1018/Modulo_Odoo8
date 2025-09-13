@@ -9,7 +9,7 @@
                         <group>
                             <field name="name" placeholder="Nombre del examen"/>
                             <field name="date" placeholder="Fecha del examen"/>
-                            <field name="subject_id" placeholder="Asignatura"/>
+                            <field name="subject_id" placeholder="Asignatura" options="{'no_create': True}"/>
                         </group>
                         <notebook>
                             <page string="Preguntas">
