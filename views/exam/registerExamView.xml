@@ -19,6 +19,7 @@
                                             <group>
                                                 <field name="text" placeholder="Texto de la pregunta"/>
                                                 <field name="exam_id" invisible="1"/>
+                                                <field name="correct_answer" placeholder="Respuesta Correcta" groups="Modulo_Odoo8.group_profesor,base.group_system"/>
                                             </group>
                                             <notebook>
                                                 <page string="Respuestas">

@@ -140,7 +140,7 @@
         <menuitem id="submenu_examenes_principal" name="Exámenes" parent="menu_desplegable"/>
         <menuitem id="submenu_examenes" name="Gestión de Exámenes" parent="submenu_examenes_principal"
                 action="action_administrador_examenes"
-                groups="Modulo_Odoo8.group_estudiante,Modulo_Odoo8.group_profesor,base.group_system"/>
+                groups="Modulo_Odoo8.group_profesor,base.group_system,Modulo_Odoo8.group_estudiante"/>
 
     </data>
 </openerp>

@@ -1,0 +1,53 @@
+<openerp>
+    <data>
+        <record id="action_grade_exam_wizard" model="ir.actions.act_window">
+            <field name="name">Calificar Examen</field>
+            <field name="res_model">grade.exam.wizard</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">form</field>
+            <field name="target">new</field>
+        </record>
+        <record id="exam_form_inherit_grade" model="ir.ui.view">
+            <field name="name">odooeduconnect.exam.form.grade</field>
+            <field name="model">odooeduconnect_exam</field>
+            <field name="inherit_id" ref="Modulo_Odoo8.view_exam_form_custom1"/>
+            <field name="arch" type="xml">
+                <xpath expr="//form/sheet" position="before">
+                    <header>
+                        <button name="%(action_grade_exam_wizard)d"
+                                string="Calificar Examen"
+                                type="action"
+                                class="oe_highlight"/>
+                    </header>
+                </xpath>
+            </field>
+        </record>
+        <record id="view_grade_exam_wizard_form" model="ir.ui.view">
+            <field name="name">grade.exam.wizard.form</field>
+            <field name="model">grade.exam.wizard</field>
+            <field name="arch" type="xml">
+                <form string="Calificar Examen" version="7.0">
+                    <group>
+                        <field name="exam_id" readonly="1"/>
+                        <field name="student_id"/>
+                        <field name="date"/>
+                    </group>
+                    <group string="Resultados del Examen" attrs="{'invisible': [('questions', '=', 0)]}">
+                        <field name="questions"/>
+                        <field name="max_score"/>
+                        <field name="score"/>
+                        <field name="percentage"/>
+                    </group>
+                    <group string="Detalle del Calculo" attrs="{'invisible': [('calculation_detail', '=', False)]}">
+                        <field name="calculation_detail" nolabel="1" colspan="2"/>
+                    </group>
+                    <footer>
+                        <button string="Calcular y Guardar Calificación" type="object" name="action_calculate_score"
+                                class="oe_highlight" attrs="{'invisible': [('questions', '!=', 0)]}"/>
+                        <button string="Cerrar" class="oe_link" special="cancel"/>
+                    </footer>
+                </form>
+            </field>
+        </record>
+    </data>
+</openerp>

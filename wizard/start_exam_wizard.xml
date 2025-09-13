@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<openerp>
+    <data>
+        <record id="view_duplicate_exam_wizard_form" model="ir.ui.view">
+            <field name="name">duplicate.exam.wizard.form</field>
+            <field name="model">duplicate_exam_wizard</field>
+            <field name="arch" type="xml">
+                <form string="Iniciar Examen" version="7.0">
+                    <group>
+                        <field name="exam_id" readonly="1" string="Examen original"/>
+                        <field name="new_name" string="Nuevo nombre"/>
+                        <field name="new_date" string="Nueva fecha"/>
+                    </group>
+                    <footer>
+                        <button string="Iniciar" type="object" name="confirm_duplicate" class="oe_highlight"/>
+                        <button string="Cancelar" class="oe_link" special="cancel"/>
+                    </footer>
+                </form>
+            </field>
+        </record>
+        <record id="action_duplicate_exam_wizard" model="ir.actions.act_window">
+            <field name="name">Iniciar Examen</field>
+            <field name="res_model">duplicate_exam_wizard</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">form</field>
+            <field name="target">new</field>
+        </record>
+        <record id="exam_form_inherit_duplicate" model="ir.ui.view">
+            <field name="name">odooeduconnect.exam.form.duplicate</field>
+            <field name="model">odooeduconnect_exam</field>
+            <field name="inherit_id" ref="Modulo_Odoo8.view_exam_form_custom1"/>
+            <field name="arch" type="xml">
+                <xpath expr="//form/sheet" position="before">
+                    <header>
+                        <button name="%(action_duplicate_exam_wizard)d"
+                                string="Iniciar Examen"
+                                type="action"
+                                class="oe_highlight"/>
+                    </header>
+                </xpath>
+            </field>
+        </record>
+    </data>
+</openerp>
