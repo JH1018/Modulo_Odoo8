@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data noupdate="1">
+        <!-- Respuestas para Pregunta Math 01: ¿2 + 2? -->
+        <record id="answer_math_01_a" model="odooeduconnect_answer">
+            <field name="text">3</field>
+            <field name="is_correct">False</field>
+            <field name="question_id" ref="question_math_01"/>
+        </record>
+
+        <record id="answer_math_01_b" model="odooeduconnect_answer">
+            <field name="text">4</field>
+            <field name="is_correct">True</field>
+            <field name="question_id" ref="question_math_01"/>
+        </record>
+
+        <record id="answer_math_01_c" model="odooeduconnect_answer">
+            <field name="text">5</field>
+            <field name="is_correct">False</field>
+            <field name="question_id" ref="question_math_01"/>
+        </record>
+
+        <!-- Respuestas para Pregunta Math 02: Raíz de 16 -->
+        <record id="answer_math_02_a" model="odooeduconnect_answer">
+            <field name="text">2</field>
+            <field name="is_correct">False</field>
+            <field name="question_id" ref="question_math_02"/>
+        </record>
+
+        <record id="answer_math_02_b" model="odooeduconnect_answer">
+            <field name="text">4</field>
+            <field name="is_correct">True</field>
+            <field name="question_id" ref="question_math_02"/>
+        </record>
+
+        <record id="answer_math_02_c" model="odooeduconnect_answer">
+            <field name="text">8</field>
+            <field name="is_correct">False</field>
+            <field name="question_id" ref="question_math_02"/>
+        </record>
+
+        <!-- Respuestas para Pregunta Math 03: 5 × 3 -->
+        <record id="answer_math_03_a" model="odooeduconnect_answer">
+            <field name="text">12</field>
+            <field name="is_correct">False</field>
+            <field name="question_id" ref="question_math_03"/>
+        </record>
+
+        <record id="answer_math_03_b" model="odooeduconnect_answer">
+            <field name="text">15</field>
+            <field name="is_correct">True</field>
+            <field name="question_id" ref="question_math_03"/>
+        </record>
+
+        <record id="answer_math_03_c" model="odooeduconnect_answer">
+            <field name="text">18</field>
+            <field name="is_correct">False</field>
+            <field name="question_id" ref="question_math_03"/>
+        </record>
+
+        <!-- Respuestas para Pregunta Science 01: Planeta más cercano -->
+        <record id="answer_science_01_a" model="odooeduconnect_answer">
+            <field name="text">Venus</field>
+            <field name="is_correct">False</field>
+            <field name="question_id" ref="question_science_01"/>
+        </record>
+
+        <record id="answer_science_01_b" model="odooeduconnect_answer">
+            <field name="text">Mercurio</field>
+            <field name="is_correct">True</field>
+            <field name="question_id" ref="question_science_01"/>
+        </record>
+
+        <record id="answer_science_01_c" model="odooeduconnect_answer">
+            <field name="text">Tierra</field>
+            <field name="is_correct">False</field>
+            <field name="question_id" ref="question_science_01"/>
+        </record>
+
+        <!-- Respuestas para Pregunta Science 02: Número de planetas -->
+        <record id="answer_science_02_a" model="odooeduconnect_answer">
+            <field name="text">7</field>
+            <field name="is_correct">False</field>
+            <field name="question_id" ref="question_science_02"/>
+        </record>
+
+        <record id="answer_science_02_b" model="odooeduconnect_answer">
+            <field name="text">8</field>
+            <field name="is_correct">True</field>
+            <field name="question_id" ref="question_science_02"/>
+        </record>
+
+        <record id="answer_science_02_c" model="odooeduconnect_answer">
+            <field name="text">9</field>
+            <field name="is_correct">False</field>
+            <field name="question_id" ref="question_science_02"/>
+        </record>
+
+        <!-- Respuestas para Pregunta Science 03: Gas más abundante -->
+        <record id="answer_science_03_a" model="odooeduconnect_answer">
+            <field name="text">Oxígeno</field>
+            <field name="is_correct">False</field>
+            <field name="question_id" ref="question_science_03"/>
+        </record>
+
+        <record id="answer_science_03_b" model="odooeduconnect_answer">
+            <field name="text">Nitrógeno</field>
+            <field name="is_correct">True</field>
+            <field name="question_id" ref="question_science_03"/>
+        </record>
+
+        <record id="answer_science_03_c" model="odooeduconnect_answer">
+            <field name="text">Dióxido de carbono</field>
+            <field name="is_correct">False</field>
+            <field name="question_id" ref="question_science_03"/>
+        </record>
+    </data>
+</openerp>

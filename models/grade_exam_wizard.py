@@ -6,8 +6,8 @@ class GradeExamWizard(osv.osv_memory):
     _description = "Wizard para Calificar Examen"
 
     _columns = {
-        "exam_id": fields.many2one("odooeduconnect_exam", "Examen", required=True),
-        "student_id": fields.many2one("odooeduconnect_student", "Estudiante", required=True),
+        "exam_id": fields.many2one("odooeduconnect_exam", "Examen", required=True, ondelete='cascade'),
+        "student_id": fields.many2one("odooeduconnect_student", "Estudiante", required=True, ondelete='cascade'),
         "questions": fields.integer("Numero de preguntas", readonly=True),
         "score": fields.integer("Puntuacion obtenida", readonly=True),
         "max_score": fields.integer("Puntuacion maxima", readonly=True),

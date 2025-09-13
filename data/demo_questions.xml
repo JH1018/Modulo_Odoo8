@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data noupdate="1">
+        <!-- Demo Questions para Matemáticas -->
+        <record id="question_math_01" model="odooeduconnect_question">
+            <field name="text">¿Cuál es el resultado de 2 + 2?</field>
+            <field name="correct_answer">4</field>
+            <field name="exam_id" ref="exam_matematicas_parcial"/>
+        </record>
+
+        <record id="question_math_02" model="odooeduconnect_question">
+            <field name="text">¿Cuál es la raíz cuadrada de 16?</field>
+            <field name="correct_answer">4</field>
+            <field name="exam_id" ref="exam_matematicas_parcial"/>
+        </record>
+
+        <record id="question_math_03" model="odooeduconnect_question">
+            <field name="text">Resuelve: 5 × 3 = ?</field>
+            <field name="correct_answer">15</field>
+            <field name="exam_id" ref="exam_matematicas_final"/>
+        </record>
+
+        <!-- Demo Questions para Ciencias -->
+        <record id="question_science_01" model="odooeduconnect_question">
+            <field name="text">¿Cuál es el planeta más cercano al Sol?</field>
+            <field name="correct_answer">Mercurio</field>
+            <field name="exam_id" ref="exam_ciencias_quiz"/>
+        </record>
+
+        <record id="question_science_02" model="odooeduconnect_question">
+            <field name="text">¿Cuántos planetas tiene nuestro sistema solar?</field>
+            <field name="correct_answer">8</field>
+            <field name="exam_id" ref="exam_ciencias_quiz"/>
+        </record>
+
+        <record id="question_science_03" model="odooeduconnect_question">
+            <field name="text">¿Cuál es el gas más abundante en la atmósfera terrestre?</field>
+            <field name="correct_answer">Nitrógeno</field>
+            <field name="exam_id" ref="exam_ciencias_quiz"/>
+        </record>
+    </data>
+</openerp>

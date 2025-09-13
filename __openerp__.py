@@ -40,6 +40,17 @@
         'wizard/room_export_wizard_view.xml',
         'wizard/start_exam_wizard.xml',
     ],
+    'demo': [
+        'data/demo_teachers.xml',
+        'data/demo_students.xml',
+        'data/demo_rooms.xml',
+        'data/demo_subjects.xml',
+        'data/demo_grades.xml',
+        'data/demo_exams.xml',
+        'data/demo_questions.xml',
+        'data/demo_answers.xml',
+        'data/demo_relations.xml',
+    ],
     'installable': True,
     'auto_install': False,
     'external_dependencies': {

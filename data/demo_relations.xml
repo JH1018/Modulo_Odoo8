@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data noupdate="1">
+        <!-- Relaciones Many2Many basadas en los datos CSV -->
+        
+        <!-- Asignar estudiantes a materias según CSV -->
+        <record id="subject_matematicas" model="odooeduconnect_subject">
+            <field name="students" eval="[(6, 0, [ref('student_juan_perez'), ref('student_sofia_gutierrez')])]"/>
+        </record>
+
+        <record id="subject_ciencias" model="odooeduconnect_subject">
+            <field name="students" eval="[(6, 0, [ref('student_ana_lopez'), ref('student_carla_martinez')])]"/>
+        </record>
+
+        <!-- Asignar materias a maestros según CSV -->
+        <record id="teacher_carlos_morales" model="odooeduconnect_teacher">
+            <field name="subject_ids" eval="[(6, 0, [ref('subject_matematicas')])]"/>
+        </record>
+
+        <record id="teacher_juan_herrera" model="odooeduconnect_teacher">
+            <field name="subject_ids" eval="[(6, 0, [ref('subject_ciencias')])]"/>
+        </record>
+
+        <!-- Asignar estudiantes a salones según datos CSV -->
+        <record id="room_salon_a" model="odooeduconnect_room">
+            <field name="students" eval="[(6, 0, [ref('student_ana_lopez'), ref('student_juan_perez'), ref('student_carla_martinez')])]"/>
+        </record>
+
+        <record id="room_salon_b" model="odooeduconnect_room">
+            <field name="students" eval="[(6, 0, [ref('student_carla_martinez'), ref('student_luis_ramirez'), ref('student_sofia_gutierrez')])]"/>
+        </record>
+    </data>
+</openerp>

@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data noupdate="1">
+        <!-- Demo Grades basadas en los datos CSV -->
+        <record id="grade_carla_ciencias" model="odooeduconnect_grade">
+            <field name="student_id" ref="student_carla_martinez"/>
+            <field name="subject_id" ref="subject_ciencias"/>
+            <field name="score">60</field>
+            <field name="date" eval="time.strftime('%Y-%m-%d')"/>
+        </record>
+
+        <!-- Calificaciones adicionales para demo -->
+        <record id="grade_juan_matematicas" model="odooeduconnect_grade">
+            <field name="student_id" ref="student_juan_perez"/>
+            <field name="subject_id" ref="subject_matematicas"/>
+            <field name="score">85</field>
+            <field name="date" eval="time.strftime('%Y-%m-%d')"/>
+        </record>
+
+        <record id="grade_sofia_matematicas" model="odooeduconnect_grade">
+            <field name="student_id" ref="student_sofia_gutierrez"/>
+            <field name="subject_id" ref="subject_matematicas"/>
+            <field name="score">92</field>
+            <field name="date" eval="time.strftime('%Y-%m-%d')"/>
+        </record>
+
+        <record id="grade_ana_ciencias" model="odooeduconnect_grade">
+            <field name="student_id" ref="student_ana_lopez"/>
+            <field name="subject_id" ref="subject_ciencias"/>
+            <field name="score">78</field>
+            <field name="date" eval="time.strftime('%Y-%m-%d')"/>
+        </record>
+
+        <record id="grade_luis_matematicas" model="odooeduconnect_grade">
+            <field name="student_id" ref="student_luis_ramirez"/>
+            <field name="subject_id" ref="subject_matematicas"/>
+            <field name="score">73</field>
+            <field name="date" eval="time.strftime('%Y-%m-%d')"/>
+        </record>
+    </data>
+</openerp>

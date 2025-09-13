@@ -29,7 +29,7 @@
                 <form string="Calificar Examen" version="7.0">
                     <group>
                         <field name="exam_id" readonly="1"/>
-                        <field name="student_id"/>
+                        <field name="student_id" options="{'no_create': True}"/>
                         <field name="date"/>
                     </group>
                     <group string="Resultados del Examen" attrs="{'invisible': [('questions', '=', 0)]}">

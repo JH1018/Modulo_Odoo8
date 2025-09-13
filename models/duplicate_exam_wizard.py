@@ -5,7 +5,7 @@ class DuplicateExamWizard(osv.osv_memory):
     _description = 'Wizard para duplicar examen'
 
     _columns = {
-        'exam_id': fields.many2one('odooeduconnect_exam', 'Examen', required=True),
+        'exam_id': fields.many2one('odooeduconnect_exam', 'Examen', required=True, ondelete='cascade'),
         'new_name': fields.char('Nuevo nombre', required=True),
         'new_date': fields.date('Nueva fecha', required=True),
     }
