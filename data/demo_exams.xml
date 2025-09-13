@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <openerp>
     <data noupdate="1">
-        <!-- Demo Exams basados en los datos CSV -->
         <record id="exam_matematicas_parcial" model="odooeduconnect_exam">
             <field name="name">Examen Parcial - Matemáticas Básicas</field>
             <field name="date" eval="time.strftime('%Y-%m-%d')"/>

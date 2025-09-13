@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <openerp>
     <data noupdate="1">
-        <!-- Demo Students -->
         <record id="student_ana_lopez" model="odooeduconnect_student">
             <field name="name">Ana Maria Lopez Sanchez</field>
             <field name="address">1ra Calle, Zona 1</field>

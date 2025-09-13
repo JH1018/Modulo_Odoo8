@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <openerp>
     <data noupdate="1">
-        <!-- Demo Rooms -->
         <record id="room_salon_a" model="odooeduconnect_room">
             <field name="name">Salon A</field>
             <field name="capacity">30</field>

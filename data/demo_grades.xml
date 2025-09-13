@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <openerp>
     <data noupdate="1">
-        <!-- Demo Grades basadas en los datos CSV -->
         <record id="grade_carla_ciencias" model="odooeduconnect_grade">
             <field name="student_id" ref="student_carla_martinez"/>
             <field name="subject_id" ref="subject_ciencias"/>
@@ -9,7 +8,6 @@
             <field name="date" eval="time.strftime('%Y-%m-%d')"/>
         </record>
 
-        <!-- Calificaciones adicionales para demo -->
         <record id="grade_juan_matematicas" model="odooeduconnect_grade">
             <field name="student_id" ref="student_juan_perez"/>
             <field name="subject_id" ref="subject_matematicas"/>

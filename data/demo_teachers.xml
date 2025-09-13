@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <openerp>
     <data noupdate="1">
-        <!-- Demo Teachers -->
         <record id="teacher_carlos_morales" model="odooeduconnect_teacher">
             <field name="name">Carlos Eduardo Morales Diaz</field>
             <field name="address">Av. Reforma 123, Zona 1</field>

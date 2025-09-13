@@ -1,0 +1,4 @@
+"id","address","age","email","name","password","phone","profile_picture","subject_ids/id"
+"__export__.odooeduconnect_teacher_1","Av. Reforma 123, Zona 1","35","carlos.morales@example.com","Carlos Eduardo Morales Diaz","temp123","5551111","","__export__.odooeduconnect_subject_1"
+"__export__.odooeduconnect_teacher_2","Calle Sol 45, Zona 2","42","maria.lopez@example.com","Maria Fernanda Lopez Ruiz","temp123","5552222","",""
+"__export__.odooeduconnect_teacher_3","3ra Avenida 78, Zona 3","38","juan.herrera@example.com","Juan Pablo Herrera Gomez","temp123","55533333","","__export__.odooeduconnect_subject_2"

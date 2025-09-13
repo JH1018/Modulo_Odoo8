@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <openerp>
     <data noupdate="1">
-        <!-- Demo Questions para Matemáticas -->
         <record id="question_math_01" model="odooeduconnect_question">
             <field name="text">¿Cuál es el resultado de 2 + 2?</field>
             <field name="correct_answer">4</field>
@@ -20,7 +19,6 @@
             <field name="exam_id" ref="exam_matematicas_final"/>
         </record>
 
-        <!-- Demo Questions para Ciencias -->
         <record id="question_science_01" model="odooeduconnect_question">
             <field name="text">¿Cuál es el planeta más cercano al Sol?</field>
             <field name="correct_answer">Mercurio</field>
