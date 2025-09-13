@@ -8,3 +8,7 @@ import teacher_export_wizard
 import subject_export_wizard
 import grade_export_wizard
 import room_export_wizard
+import answer
+import exam
+import question
+import student_answer

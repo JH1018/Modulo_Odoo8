@@ -1,0 +1,22 @@
+<openerp>
+    <data>
+        <record id="view_exam_search_custom1" model="ir.ui.view">
+            <field name="name">exam.search.custom1</field>
+            <field name="model">odooeduconnect_exam</field>
+            <field name="arch" type="xml">
+                <search string="Buscar Exámenes">
+                    <field name="name" string="Nombre"/>
+                    <field name="date" string="Fecha"/>
+                    <field name="subject_id" string="Asignatura"/>
+                    <filter string="Con Preguntas" name="has_questions" domain="[('question_ids','!=',False)]"/>
+                    <filter string="Sin Preguntas" name="no_questions" domain="[('question_ids','=',False)]"/>
+                    <separator/>
+                    <group expand="0" string="Agrupar Por">
+                        <filter string="Por Fecha" context="{'group_by':'date'}"/>
+                        <filter string="Por Asignatura" context="{'group_by':'subject_id'}"/>
+                    </group>
+                </search>
+            </field>
+        </record>
+    </data>
+</openerp>

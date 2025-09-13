@@ -10,6 +10,10 @@
         'security/security.xml',
         'security/student_rules.xml',
         'security/ir.model.access.csv',
+        
+        'views/exam/searchExam.xml',
+        'views/exam/registerExamView.xml',
+        'views/exam/tree_exam.xml',
         'views/teacher/searchRegisterView.xml',
         'views/teacher/tree_teacher.xml',
         'views/teacher/registerTeacherView.xml',

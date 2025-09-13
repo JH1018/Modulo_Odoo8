@@ -86,6 +86,23 @@
             <field name="view_id" ref="view_grade_form_custom1"/>
         </record>
 
+        <!-- Acción Examenes -->
+        <record id="action_administrador_examenes" model="ir.actions.act_window">
+            <field name="name">Gestión de Examenes</field>
+            <field name="res_model">odooeduconnect_exam</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+            <field name="view_id" ref="view_exam_tree_custom1"/>
+            <field name="search_view_id" ref="Modulo_Odoo8.view_exam_search_custom1"/>
+            <field name="target">current</field>
+        </record>
+
+        <record id="action_administrador_examenes_form_view_custom1" model="ir.actions.act_window.view">
+            <field name="act_window_id" ref="action_administrador_examenes"/>
+            <field name="view_mode">form</field>
+            <field name="view_id" ref="view_exam_form_custom1"/>
+        </record>
+
         <!-- MENÚS -->
         <menuitem id="menu_desplegable" name="Administración" sequence="1"/>
 
@@ -117,6 +134,12 @@
         <menuitem id="submenu_notas_principal" name="Notas" parent="menu_desplegable"/>
         <menuitem id="submenu_notas" name="Gestión de Notas" parent="submenu_notas_principal"
                 action="action_administrador_notas"
+                groups="Modulo_Odoo8.group_estudiante,Modulo_Odoo8.group_profesor,base.group_system"/>
+
+        <!-- Examenes -->
+        <menuitem id="submenu_examenes_principal" name="Exámenes" parent="menu_desplegable"/>
+        <menuitem id="submenu_examenes" name="Gestión de Exámenes" parent="submenu_examenes_principal"
+                action="action_administrador_examenes"
                 groups="Modulo_Odoo8.group_estudiante,Modulo_Odoo8.group_profesor,base.group_system"/>
 
     </data>

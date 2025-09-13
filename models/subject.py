@@ -28,4 +28,9 @@ class Subject(osv.osv):
             ondelete='set null',
             required=False
         ),
+        "exam_ids": fields.one2many(
+            'odooeduconnect_exam',
+            'subject_id',
+            'Exams'
+        )
     }
