@@ -1,0 +1,25 @@
+<openerp>
+    <data>
+        <record id="student_rule_own" model="ir.rule">
+            <field name="name">Student: Ver solo su registro</field>
+            <field name="model_id" ref="model_odooeduconnect_student"/>
+            <field name="groups" eval="[(4, ref('Modulo_Odoo8.group_estudiante'))]"/>
+            <field name="domain_force">[('email','=',user.login)]</field>
+            <field name="perm_read" eval="True"/>
+            <field name="perm_write" eval="False"/>
+            <field name="perm_create" eval="False"/>
+            <field name="perm_unlink" eval="False"/>
+        </record>
+
+        <record id="grade_rule_own" model="ir.rule">
+            <field name="name">Grade: Ver solo sus notas</field>
+            <field name="model_id" ref="model_odooeduconnect_grade"/>
+            <field name="groups" eval="[(4, ref('Modulo_Odoo8.group_estudiante'))]"/>
+            <field name="domain_force">[('student_id.email','=',user.login)]</field>
+            <field name="perm_read" eval="True"/>
+            <field name="perm_write" eval="False"/>
+            <field name="perm_create" eval="False"/>
+            <field name="perm_unlink" eval="False"/>
+        </record>
+    </data>
+</openerp>

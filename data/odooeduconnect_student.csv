@@ -1,0 +1,6 @@
+"id","address","age","email","grade","grades_ids/id","name","password","phone","prefix","profile_picture","room_id/id","section","subjects/id"
+"__export__.odooeduconnect_student_3","1ra Calle, Zona 1","15","ana.lopez@example.com","9","","Ana Maria Lopez Sanchez","SCP0001","5551234","SCP","","","A","__export__.odooeduconnect_subject_2"
+"__export__.odooeduconnect_student_4","Av. Central, Zona 2","16","juan.perez@example.com","9","","Juan Carlos Perez Gomez","RTX0001","5555678","RTX","","","B","__export__.odooeduconnect_subject_1"
+"__export__.odooeduconnect_student_5","Calle Luna, Zona 3","14","carla.m@example.com","8","__export__.odooeduconnect_grade_2","Carla Isabel Martinez Ruiz","SCP0002","5558765","SCP","","","A","__export__.odooeduconnect_subject_2"
+"__export__.odooeduconnect_student_6","5ta Avenida, Zona 1","17","luis.r@example.com","11","","Luis Fernando Ramirez Diaz","RTX0002","5554321","RTX","","","C",""
+"__export__.odooeduconnect_student_7","Barrio Nuevo, Zona 4","15","sofia.g@example.com","9","","Sofia Valeria Gutierrez Lopez","RTX0003","5559876","RTX","","","B","__export__.odooeduconnect_subject_1"

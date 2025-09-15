@@ -1,0 +1,24 @@
+<openerp>
+    <data>
+        <record id="view_teacher_search_custom1" model="ir.ui.view">
+            <field name="name">teacher.search.custom1</field>
+            <field name="model">odooeduconnect_teacher</field>
+            <field name="arch" type="xml">
+                <search string="Buscar Maestros">
+                    <field name="name" string="Nombre"/>
+                    <field name="email" string="Correo"/>
+                    <field name="phone" string="Teléfono"/>
+                    <field name="age" string="Edad"/>
+                    <filter string="Con Materias" name="has_subjects" domain="[('subject_ids','!=',False)]"/>
+                    <filter string="Sin Materias" name="no_subjects" domain="[('subject_ids','=',False)]"/>
+                    <filter string="Mayores de 30" name="older_than_30" domain="[('age','>',30)]"/>
+                    <filter string="Menores o iguales a 30" name="younger_equal_30" domain="[('age','&lt;=',30)]"/>
+                    <separator/>
+                    <group expand="0" string="Agrupar Por">
+                        <filter string="Por Edad" context="{'group_by':'age'}"/>
+                    </group>
+                </search>
+            </field>
+        </record>
+    </data>
+</openerp>

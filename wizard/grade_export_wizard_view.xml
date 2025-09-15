@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<openerp>
+    <data>
+        <record id="action_grade_export_wizard" model="ir.actions.act_window">
+            <field name="name">Exportar Calificaciones a PDF</field>
+            <field name="res_model">grade.export.wizard</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">form</field>
+            <field name="target">new</field>
+        </record>
+        <record id="grade_form_inherit_export" model="ir.ui.view">
+            <field name="name">odooeduconnect.grade.form.export</field>
+            <field name="model">odooeduconnect_grade</field>
+            <field name="inherit_id" ref="Modulo_Odoo8.view_grade_form_custom1"/>
+            <field name="arch" type="xml">
+                <xpath expr="//form/sheet" position="before">
+                    <header>
+                        <button name="%(action_grade_export_wizard)d"
+                                string="Exportar PDF"
+                                type="action"
+                                class="oe_highlight"/>
+                    </header>
+                </xpath>
+            </field>
+        </record>
+        <record model="ir.ui.view" id="view_grade_export_wizard_form">
+            <field name="name">grade.export.wizard.form</field>
+            <field name="model">grade.export.wizard</field>
+            <field name="arch" type="xml">
+                <form string="Exportar Calificaciones a PDF">
+                    <group>
+                        <field name="dummy" invisible="1"/>
+                        <group attrs="{'invisible': [('file_data', '=', False)]}">
+                            <label string="El PDF ha sido generado correctamente." class="oe_inline"/>
+                            <field name="file_data" filename="file_name" attrs="{'invisible': [('file_data', '=', False)]}"/>
+                            <field name="file_name" invisible="1"/>
+                        </group>
+                    </group>
+                    <footer>
+                        <button string="Generar PDF" type="object" name="action_export_pdf" 
+                                class="oe_highlight" attrs="{'invisible': [('file_data', '!=', False)]}"/>
+                        <button string="Cerrar" class="oe_link" special="cancel"/>
+                    </footer>
+                </form>
+            </field>
+        </record>
+    </data>
+</openerp>

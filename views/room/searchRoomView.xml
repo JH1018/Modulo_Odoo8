@@ -1,0 +1,23 @@
+<openerp>
+    <data>
+        <record id="view_room_search_custom1" model="ir.ui.view">
+            <field name="name">room.search.custom1</field>
+            <field name="model">odooeduconnect_room</field>
+            <field name="arch" type="xml">
+                <search string="Buscar Salones">
+                    <field name="name" string="Nombre"/>
+                    <field name="capacity" string="Capacidad"/>
+                    <filter string="Con Estudiantes" name="has_students" domain="[('students','!=',False)]"/>
+                    <filter string="Sin Estudiantes" name="no_students" domain="[('students','=',False)]"/>
+                    <filter string="Con Asignaturas" name="has_subjects" domain="[('subject_id','!=',False)]"/>
+                    <filter string="Sin Asignaturas" name="no_subjects" domain="[('subject_id','=',False)]"/>
+                    <separator/>
+                    <group expand="0" string="Agrupar Por">
+                        <filter string="Por Nombre" context="{'group_by':'name'}"/>
+                        <filter string="Por Capacidad" context="{'group_by':'capacity'}"/>
+                    </group>
+                </search>
+            </field>
+        </record>
+    </data>
+</openerp>

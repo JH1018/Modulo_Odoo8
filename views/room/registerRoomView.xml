@@ -1,0 +1,35 @@
+<openerp>
+    <data>
+        <record id="view_room_form_custom1" model="ir.ui.view">
+            <field name="name">room.form.custom1</field>
+            <field name="model">odooeduconnect_room</field>
+            <field name="arch" type="xml">
+                <form string="Salón">
+                    <sheet class="oe_form_sheet">
+                        <group>
+                            <field name="name" placeholder="Nombre del salón"/>
+                            <field name="capacity" placeholder="Capacidad"/>
+                        </group>
+                        <notebook>
+                            <page string="Estudiantes">
+                                <field name="students" widget="many2many" options="{'no_create': True}">
+                                    <tree string="Estudiantes en este salón" editable="false">
+                                        <field name="name"/>
+                                        <field name="student_card"/>
+                                        <field name="age"/>
+                                        <field name="section"/>
+                                        <field name="grade"/>
+                                        <field name="email"/>
+                                        <field name="phone"/>
+                                        <field name="address"/>
+                                    </tree>
+                                </field>
+                            </page>
+                        </notebook>
+                        <div class="oe_clear"/>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+    </data>
+</openerp>

@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<openerp>
+    <data>
+        <record id="view_subject_form_custom1" model="ir.ui.view">
+            <field name="name">subject.form.custom1</field>
+            <field name="model">odooeduconnect_subject</field>
+            <field name="arch" type="xml">
+                <form string="Materia">
+                    <sheet>
+                        <div class="oe_title">
+                            <h1>
+                                <field name="name" placeholder="Nombre de la materia..."/>
+                            </h1>
+                        </div>
+                        <group>
+                            <group>
+                                <field name="code" string="Código" required="1" placeholder="Ej: MAT101"/>
+                                <field name="room_id" string="Aula" required="1" options="{'no_create': True}"/>
+                            </group>
+                            <group>
+                                <field name="description" string="Descripción"/>
+                            </group>
+                        </group>
+                        <notebook>
+                            <page string="Estudiantes">
+                                <field name="students" widget="many2many" options="{'no_create': True}">
+                                    <tree string="Estudiantes en este salón" editable="false">
+                                        <field name="name"/>
+                                        <field name="student_card"/>
+                                        <field name="section"/>
+                                        <field name="grade"/>
+                                        <field name="email"/>
+                                    </tree>
+                                </field>
+                            </page>
+                            <page string="Maestros">
+                                <field name="teacher_id" widget="many2one" options="{'no_create': True}">
+                                    <tree string="Maestros de esta materia" editable="false">
+                                        <field name="name"/>
+                                        <field name="email"/>
+                                    </tree>
+                                </field>
+                            </page>
+                        </notebook>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+    </data>
+</openerp>

@@ -1,0 +1,16 @@
+<openerp>
+    <data>
+        <record id="view_grade_tree_custom1" model="ir.ui.view">
+            <field name="name">grade.tree.custom1</field>
+            <field name="model">odooeduconnect_grade</field>
+            <field name="arch" type="xml">
+                <tree string="Calificaciones">
+                    <field name="student_id"/>
+                    <field name="subject_id"/>
+                    <field name="score"/>
+                </tree>
+            </field>
+        </record>
+    </data>
+</openerp>
+

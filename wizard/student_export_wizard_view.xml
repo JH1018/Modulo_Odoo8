@@ -1,0 +1,42 @@
+<openerp>
+    <data>
+        <record id="action_student_export_wizard" model="ir.actions.act_window">
+            <field name="name">Exportar Estudiantes</field>
+            <field name="res_model">student.export.wizard</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">form</field>
+            <field name="target">new</field>
+        </record>
+        <record id="student_form_inherit_export" model="ir.ui.view">
+            <field name="name">odooeduconnect.student.form.export</field>
+            <field name="model">odooeduconnect_student</field>
+            <field name="inherit_id" ref="Modulo_Odoo8.view_student_form_custom1"/>
+            <field name="arch" type="xml">
+                <xpath expr="//form/sheet" position="before">
+                    <header>
+                        <button name="%(action_student_export_wizard)d"
+                                string="Exportar PDF"
+                                type="action"
+                                class="oe_highlight"/>
+                    </header>
+                </xpath>
+            </field>
+        </record>
+        <record id="view_student_export_wizard" model="ir.ui.view">
+            <field name="name">student.export.wizard.form</field>
+            <field name="model">student.export.wizard</field>
+            <field name="arch" type="xml">
+                <form string="Exportar Estudiantes a PDF">
+                    <group>
+                        <label string="¿Deseas exportar todos los estudiantes en PDF?"/>
+                        <field name="file_data" filename="file_name" widget="binary" readonly="1"/>
+                    </group>
+                    <footer>
+                        <button string="Exportar PDF" name="action_export_pdf" type="object" class="oe_highlight"/>
+                        <button string="Cerrar" class="oe_link" special="cancel"/>
+                    </footer>
+                </form>
+            </field>
+        </record>
+    </data>
+</openerp>

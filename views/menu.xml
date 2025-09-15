@@ -1,0 +1,146 @@
+<openerp>
+    <data>
+
+        <!-- Acción Estudiantes -->
+        <record id="action_administrador" model="ir.actions.act_window">
+            <field name="name">Gestión de Estudiantes</field>
+            <field name="res_model">odooeduconnect_student</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+            <field name="view_id" ref="view_student_tree_custom1"/>
+            <field name="search_view_id" ref="Modulo_Odoo8.view_student_search_custom1"/>
+            <field name="target">current</field>
+        </record>
+
+        <record id="action_administrador_form_view_custom1" model="ir.actions.act_window.view">
+            <field name="act_window_id" ref="action_administrador"/>
+            <field name="view_mode">form</field>
+            <field name="view_id" ref="view_student_form_custom1"/>
+        </record>	
+
+        <!-- Acción Maestros -->
+        <record id="action_administrador_maestros" model="ir.actions.act_window">
+            <field name="name">Gestión de Maestros</field>
+            <field name="res_model">odooeduconnect_teacher</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+            <field name="view_id" ref="view_teacher_tree_custom1"/>
+            <field name="search_view_id" ref="Modulo_Odoo8.view_teacher_search_custom1"/>
+            <field name="target">current</field>
+        </record>
+
+        <record id="action_administrador_form_view_custom1_teacher" model="ir.actions.act_window.view">
+            <field name="act_window_id" ref="action_administrador_maestros"/>
+            <field name="view_mode">form</field>
+            <field name="view_id" ref="view_teacher_form_custom1"/>
+        </record>
+
+        <!-- Acción Salones -->
+        <record id="action_administrador_salon" model="ir.actions.act_window">
+            <field name="name">Gestión de Salones</field>
+            <field name="res_model">odooeduconnect_room</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+            <field name="view_id" ref="view_room_tree_custom1"/>
+            <field name="search_view_id" ref="Modulo_Odoo8.view_room_search_custom1"/>
+            <field name="target">current</field>
+        </record>
+
+        <record id="action_administrador_salon_form_view_custom1" model="ir.actions.act_window.view">
+            <field name="act_window_id" ref="action_administrador_salon"/>
+            <field name="view_mode">form</field>
+            <field name="view_id" ref="view_room_form_custom1"/>
+        </record>
+
+        <!-- Acción Clases -->
+        <record id="action_administrador_clases" model="ir.actions.act_window">
+            <field name="name">Gestión de Clases</field>
+            <field name="res_model">odooeduconnect_subject</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+            <field name="view_id" ref="view_subject_tree_custom1"/>
+            <field name="search_view_id" ref="Modulo_Odoo8.view_subject_search_custom1"/>
+            <field name="target">current</field>
+        </record>
+
+        <record id="action_administrador_clases_form_view_custom1" model="ir.actions.act_window.view">
+            <field name="act_window_id" ref="action_administrador_clases"/>
+            <field name="view_mode">form</field>
+            <field name="view_id" ref="view_subject_form_custom1"/>
+        </record>
+
+        <!-- Acción Notas -->
+        <record id="action_administrador_notas" model="ir.actions.act_window">
+            <field name="name">Gestión de Notas</field>
+            <field name="res_model">odooeduconnect_grade</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+            <field name="view_id" ref="view_grade_tree_custom1"/>
+            <field name="search_view_id" ref="Modulo_Odoo8.view_grade_search_custom1"/>
+            <field name="target">current</field>
+        </record>
+
+        <record id="action_administrador_grades_form_view_custom1" model="ir.actions.act_window.view">
+            <field name="act_window_id" ref="action_administrador_notas"/>
+            <field name="view_mode">form</field>
+            <field name="view_id" ref="view_grade_form_custom1"/>
+        </record>
+
+        <!-- Acción Examenes -->
+        <record id="action_administrador_examenes" model="ir.actions.act_window">
+            <field name="name">Gestión de Examenes</field>
+            <field name="res_model">odooeduconnect_exam</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+            <field name="view_id" ref="view_exam_tree_custom1"/>
+            <field name="search_view_id" ref="Modulo_Odoo8.view_exam_search_custom1"/>
+            <field name="target">current</field>
+        </record>
+
+        <record id="action_administrador_examenes_form_view_custom1" model="ir.actions.act_window.view">
+            <field name="act_window_id" ref="action_administrador_examenes"/>
+            <field name="view_mode">form</field>
+            <field name="view_id" ref="view_exam_form_custom1"/>
+        </record>
+
+        <!-- MENÚS -->
+        <menuitem id="menu_desplegable" name="Administración" sequence="1"/>
+
+        <!-- Estudiantes -->
+        <menuitem id="submenu_estudiantes_principal" name="Estudiantes" parent="menu_desplegable"/>
+        <menuitem id="submenu_estudiantes" name="Gestión de Estudiantes" parent="submenu_estudiantes_principal"
+                action="action_administrador" 
+                groups="Modulo_Odoo8.group_estudiante,Modulo_Odoo8.group_profesor,base.group_system"/>
+
+        <!-- Maestros -->
+        <menuitem id="submenu_maestros_principal" name="Maestros" parent="menu_desplegable"/>
+        <menuitem id="submenu_maestros" name="Gestión de Maestros" parent="submenu_maestros_principal"
+                action="action_administrador_maestros"
+                groups="Modulo_Odoo8.group_profesor,base.group_system"/>
+
+        <!-- Salones -->
+        <menuitem id="submenu_salon_principal" name="Salones" parent="menu_desplegable"/>
+        <menuitem id="submenu_salon" name="Gestión de Salones" parent="submenu_salon_principal" 
+                action="action_administrador_salon"
+                groups="base.group_system,Modulo_Odoo8.group_profesor"/>
+
+        <!-- Clases -->
+        <menuitem id="submenu_clases_principal" name="Clases" parent="menu_desplegable"/>
+        <menuitem id="submenu_clases" name="Gestión de Clases" parent="submenu_clases_principal"
+                action="action_administrador_clases"
+                groups="base.group_system,Modulo_Odoo8.group_profesor"/>
+
+        <!-- Notas -->
+        <menuitem id="submenu_notas_principal" name="Notas" parent="menu_desplegable"/>
+        <menuitem id="submenu_notas" name="Gestión de Notas" parent="submenu_notas_principal"
+                action="action_administrador_notas"
+                groups="Modulo_Odoo8.group_estudiante,Modulo_Odoo8.group_profesor,base.group_system"/>
+
+        <!-- Examenes -->
+        <menuitem id="submenu_examenes_principal" name="Exámenes" parent="menu_desplegable"/>
+        <menuitem id="submenu_examenes" name="Gestión de Exámenes" parent="submenu_examenes_principal"
+                action="action_administrador_examenes"
+                groups="Modulo_Odoo8.group_profesor,base.group_system,Modulo_Odoo8.group_estudiante"/>
+
+    </data>
+</openerp>

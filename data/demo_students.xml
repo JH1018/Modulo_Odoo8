@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data noupdate="1">
+        <record id="student_ana_lopez" model="odooeduconnect_student">
+            <field name="name">Ana Maria Lopez Sanchez</field>
+            <field name="address">1ra Calle, Zona 1</field>
+            <field name="age">15</field>
+            <field name="email">ana.lopez@example.com</field>
+            <field name="grade">9</field>
+            <field name="password">SCP0001</field>
+            <field name="phone">5551234</field>
+            <field name="prefix">SCP</field>
+            <field name="section">A</field>
+        </record>
+
+        <record id="student_juan_perez" model="odooeduconnect_student">
+            <field name="name">Juan Carlos Perez Gomez</field>
+            <field name="address">Av. Central, Zona 2</field>
+            <field name="age">16</field>
+            <field name="email">juan.perez@example.com</field>
+            <field name="grade">9</field>
+            <field name="password">RTX0001</field>
+            <field name="phone">5555678</field>
+            <field name="prefix">RTX</field>
+            <field name="section">B</field>
+        </record>
+
+        <record id="student_carla_martinez" model="odooeduconnect_student">
+            <field name="name">Carla Isabel Martinez Ruiz</field>
+            <field name="address">Calle Luna, Zona 3</field>
+            <field name="age">14</field>
+            <field name="email">carla.m@example.com</field>
+            <field name="grade">8</field>
+            <field name="password">SCP0002</field>
+            <field name="phone">5558765</field>
+            <field name="prefix">SCP</field>
+            <field name="section">A</field>
+        </record>
+
+        <record id="student_luis_ramirez" model="odooeduconnect_student">
+            <field name="name">Luis Fernando Ramirez Diaz</field>
+            <field name="address">5ta Avenida, Zona 1</field>
+            <field name="age">17</field>
+            <field name="email">luis.r@example.com</field>
+            <field name="grade">11</field>
+            <field name="password">RTX0002</field>
+            <field name="phone">5554321</field>
+            <field name="prefix">RTX</field>
+            <field name="section">C</field>
+        </record>
+
+        <record id="student_sofia_gutierrez" model="odooeduconnect_student">
+            <field name="name">Sofia Valeria Gutierrez Lopez</field>
+            <field name="address">Barrio Nuevo, Zona 4</field>
+            <field name="age">15</field>
+            <field name="email">sofia.g@example.com</field>
+            <field name="grade">9</field>
+            <field name="password">RTX0003</field>
+            <field name="phone">5559876</field>
+            <field name="prefix">RTX</field>
+            <field name="section">B</field>
+        </record>
+    </data>
+</openerp>

@@ -1,0 +1,57 @@
+<openerp>
+    <data>
+        <record id="view_student_form_custom1" model="ir.ui.view">
+            <field name="name">student.form.custom1</field>
+            <field name="model">odooeduconnect_student</field>
+            <field name="arch" type="xml">
+                <form string="Student">
+                    <sheet class="oe_form_sheet">
+                        <group>
+                            <group>
+                                <field name="profile_picture" widget="image" class="oe_avatar" style="height:120px;width:120px"/>
+                            </group>
+                            <group>
+                                <field name="name" placeholder="Nombre completo"/>
+                                <field name="prefix" placeholder="Prefijo (3 letras)" required="1"/>
+                                <field name="student_card" readonly="1" placeholder="ID generado automáticamente"/>
+                            </group>
+                        </group>
+                        <notebook>
+                            <page string="Información General">
+                                <group>
+                                    <group>
+                                        <field name="age" placeholder="Edad"/>
+                                        <field name="section" placeholder="Sección"/>
+                                        <field name="grade" placeholder="Grado"/>
+                                    </group>
+                                    <group>
+                                        <field name="email" placeholder="Correo electrónico"/>
+                                        <field name="password" placeholder="Contraseña"/>
+                                        <field name="phone" widget="numeric"/>
+                                        <field name="address" placeholder="Dirección"/>
+                                    </group>
+                                </group>
+                            </page>
+                            <page string="Académico">
+                                <group>
+                                    <field name="subjects" widget="many2many_tags"/>
+                                </group>
+                            </page>
+                            <page string="Notas">
+                                <group>
+                                    <field name="grades_ids" widget="one2many" options="{'no_create': True}">
+                                        <tree string="Notas" editable="false">
+                                            <field name="subject_id"/>
+                                            <field name="score"/>
+                                        </tree>
+                                    </field>
+                                </group>
+                            </page>
+                        </notebook>
+                        <div class="oe_clear"/>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+    </data>
+</openerp>

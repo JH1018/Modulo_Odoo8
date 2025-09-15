@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data noupdate="1">
+        <record id="exam_matematicas_parcial" model="odooeduconnect_exam">
+            <field name="name">Examen Parcial - Matemáticas Básicas</field>
+            <field name="date" eval="time.strftime('%Y-%m-%d')"/>
+            <field name="subject_id" ref="subject_matematicas"/>
+        </record>
+
+        <record id="exam_ciencias_quiz" model="odooeduconnect_exam">
+            <field name="name">Quiz - Ciencias Naturales</field>
+            <field name="date" eval="time.strftime('%Y-%m-%d')"/>
+            <field name="subject_id" ref="subject_ciencias"/>
+        </record>
+
+        <record id="exam_matematicas_final" model="odooeduconnect_exam">
+            <field name="name">Examen Final - Matemáticas</field>
+            <field name="date" eval="time.strftime('%Y-%m-%d')"/>
+            <field name="subject_id" ref="subject_matematicas"/>
+        </record>
+    </data>
+</openerp>

@@ -1,0 +1,16 @@
+# -*- coding: utf-8 -*-
+import student
+import subject
+import room
+import grade
+import teacher
+import exam
+import student_export_wizard
+import teacher_export_wizard
+import subject_export_wizard
+import grade_export_wizard
+import grade_exam_wizard
+import room_export_wizard
+import duplicate_exam_wizard
+import answer
+import question

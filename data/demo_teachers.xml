@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data noupdate="1">
+        <record id="teacher_carlos_morales" model="odooeduconnect_teacher">
+            <field name="name">Carlos Eduardo Morales Diaz</field>
+            <field name="address">Av. Reforma 123, Zona 1</field>
+            <field name="age">35</field>
+            <field name="email">carlos.morales@example.com</field>
+            <field name="password">temp123</field>
+            <field name="phone">5551111</field>
+        </record>
+
+        <record id="teacher_maria_lopez" model="odooeduconnect_teacher">
+            <field name="name">Maria Fernanda Lopez Ruiz</field>
+            <field name="address">Calle Sol 45, Zona 2</field>
+            <field name="age">42</field>
+            <field name="email">maria.lopez@example.com</field>
+            <field name="password">temp123</field>
+            <field name="phone">5552222</field>
+        </record>
+
+        <record id="teacher_juan_herrera" model="odooeduconnect_teacher">
+            <field name="name">Juan Pablo Herrera Gomez</field>
+            <field name="address">3ra Avenida 78, Zona 3</field>
+            <field name="age">38</field>
+            <field name="email">juan.herrera@example.com</field>
+            <field name="password">temp123</field>
+            <field name="phone">55533333</field>
+        </record>
+    </data>
+</openerp>
