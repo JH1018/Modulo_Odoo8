@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 from openerp.osv import osv, fields
 import base64
 from reportlab.pdfgen import canvas
@@ -53,14 +54,14 @@ class RoomExportWizard(osv.osv_memory):
                     y = 800
 
                 pdf.setFont("Helvetica-Bold", 14)
-                pdf.drawString(100, y, "Informacion de Salon #{}".format(i + 1))
+                pdf.drawString(100, y, "Información de Salón #{}".format(i + 1))
                 y -= 25
 
                 pdf.setFont("Helvetica", 12)
                 
                 info_data = [
                     ("Nombre", safe_get(room, 'name')),
-                    ("Numero", safe_get(room, 'number')),
+                    ("Número", safe_get(room, 'number')),
                     ("Capacidad", safe_get(room, 'capacity')),
                 ]
 
@@ -71,7 +72,7 @@ class RoomExportWizard(osv.osv_memory):
                 try:
                     if hasattr(room, 'description') and room.description:
                         pdf.setFont("Helvetica-Bold", 12)
-                        pdf.drawString(100, y, "Descripcion:")
+                        pdf.drawString(100, y, "Descripción:")
                         y -= 12
                         pdf.setFont("Helvetica", 12)
                         description = safe_get(room, 'description')
@@ -96,7 +97,7 @@ class RoomExportWizard(osv.osv_memory):
                     pass
 
                 pdf.setFont("Helvetica-Bold", 12)
-                pdf.drawString(100, y, "Estado y uso del salon:")
+                pdf.drawString(100, y, "Estado y uso del salón:")
                 y -= 15
                 pdf.setFont("Helvetica", 12)
 
@@ -111,7 +112,7 @@ class RoomExportWizard(osv.osv_memory):
                         
                         for subject in subjects:
                             subject_name = subject.name if subject.name else "Materia sin nombre"
-                            subject_code = subject.code if subject.code else "Sin codigo"
+                            subject_code = subject.code if subject.code else "Sin código"
                             
                             teacher_name = "Sin maestro"
                             if hasattr(subject, 'teacher_id') and subject.teacher_id:
@@ -143,7 +144,7 @@ class RoomExportWizard(osv.osv_memory):
                         y -= 15
                         
                 except Exception as e:
-                    pdf.drawString(120, y, "Error al obtener informacion de uso: {}".format(str(e)))
+                    pdf.drawString(120, y, "Error al obtener información de uso: {}".format(str(e)))
                     y -= 15
 
                 try:
@@ -166,7 +167,7 @@ class RoomExportWizard(osv.osv_memory):
                 pdf.showPage()
                 y = 800
                 pdf.setFont("Helvetica-Bold", 16)
-                pdf.drawString(100, y, "Estadisticas de Salones")
+                pdf.drawString(100, y, "Estadísticas de Salones")
                 y -= 30
                 
                 try:
@@ -205,7 +206,7 @@ class RoomExportWizard(osv.osv_memory):
                         y -= 15
                         
                 except Exception as e:
-                    pdf.drawString(100, y, "Error al calcular estadisticas: {}".format(str(e)))
+                    pdf.drawString(100, y, "Error al calcular estadísticas: {}".format(str(e)))
 
             pdf.showPage()
             pdf.save()

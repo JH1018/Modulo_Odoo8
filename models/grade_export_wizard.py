@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 from openerp.osv import osv, fields
 import base64
 from reportlab.pdfgen import canvas
@@ -75,19 +76,19 @@ class GradeExportWizard(osv.osv_memory):
                         pdf.drawString(100, y, "Estudiante: No asignado")
                     y -= 15
                 except:
-                    pdf.drawString(100, y, "Estudiante: Error al obtener informacion")
+                    pdf.drawString(100, y, "Estudiante: Error al obtener información")
                     y -= 15
 
                 try:
                     if hasattr(grade, 'subject_id') and grade.subject_id:
                         subject_name = grade.subject_id.name if grade.subject_id.name else "Sin nombre"
-                        subject_code = grade.subject_id.code if grade.subject_id.code else "Sin codigo"
+                        subject_code = grade.subject_id.code if grade.subject_id.code else "Sin código"
                         pdf.drawString(100, y, "Materia: {} ({})".format(subject_name, subject_code))
                     else:
                         pdf.drawString(100, y, "Materia: No asignada")
                     y -= 15
                 except:
-                    pdf.drawString(100, y, "Materia: Error al obtener informacion")
+                    pdf.drawString(100, y, "Materia: Error al obtener información")
                     y -= 15
 
                 try:
@@ -98,7 +99,7 @@ class GradeExportWizard(osv.osv_memory):
                         pdf.drawString(100, y, "Maestro: No disponible")
                     y -= 15
                 except:
-                    pdf.drawString(100, y, "Maestro: Error al obtener informacion")
+                    pdf.drawString(100, y, "Maestro: Error al obtener información")
                     y -= 15
 
                 try:
@@ -145,7 +146,7 @@ class GradeExportWizard(osv.osv_memory):
                 pdf.showPage()
                 y = 800
                 pdf.setFont("Helvetica-Bold", 16)
-                pdf.drawString(100, y, "Estadisticas Generales")
+                pdf.drawString(100, y, "Estadísticas Generales")
                 y -= 30
                 
                 try:
@@ -185,7 +186,7 @@ class GradeExportWizard(osv.osv_memory):
                             pdf.drawString(100, y, "{}: {}".format(label, value))
                             y -= 15
                 except Exception as e:
-                    pdf.drawString(100, y, "Error al calcular estadisticas: {}".format(str(e)))
+                    pdf.drawString(100, y, "Error al calcular estadísticas: {}".format(str(e)))
 
             pdf.showPage()
             pdf.save()

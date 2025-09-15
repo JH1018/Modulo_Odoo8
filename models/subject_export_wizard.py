@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 from openerp.osv import osv, fields
 import base64
 from reportlab.pdfgen import canvas
@@ -53,15 +54,15 @@ class SubjectExportWizard(osv.osv_memory):
                     y = 800
 
                 pdf.setFont("Helvetica-Bold", 14)
-                pdf.drawString(100, y, "Informacion de Materia #{}".format(i + 1))
+                pdf.drawString(100, y, "Información de Materia #{}".format(i + 1))
                 y -= 25
 
                 pdf.setFont("Helvetica", 12)
                 
                 info_data = [
                     ("Nombre", safe_get(subject, 'name')),
-                    ("Codigo", safe_get(subject, 'code')),
-                    ("Descripcion", safe_get(subject, 'description')),
+                    ("Código", safe_get(subject, 'code')),
+                    ("Descripción", safe_get(subject, 'description')),
                 ]
 
                 for label, value in info_data:
@@ -76,18 +77,18 @@ class SubjectExportWizard(osv.osv_memory):
                         pdf.drawString(100, y, "Maestro: No asignado")
                     y -= 15
                 except:
-                    pdf.drawString(100, y, "Maestro: Error al obtener informacion")
+                    pdf.drawString(100, y, "Maestro: Error al obtener información")
                     y -= 15
 
                 try:
                     if hasattr(subject, 'room_id') and subject.room_id:
                         room_name = subject.room_id.name if subject.room_id.name else "Sin nombre"
-                        pdf.drawString(100, y, "Salon: {}".format(room_name))
+                        pdf.drawString(100, y, "Salón: {}".format(room_name))
                     else:
-                        pdf.drawString(100, y, "Salon: No asignado")
+                        pdf.drawString(100, y, "Salón: No asignado")
                     y -= 20
                 except:
-                    pdf.drawString(100, y, "Salon: Error al obtener informacion")
+                    pdf.drawString(100, y, "Salón: Error al obtener información")
                     y -= 20
 
                 pdf.setFont("Helvetica-Bold", 12)

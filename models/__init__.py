@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 import student
 import subject
 import room

@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 from openerp.osv import osv, fields
 import base64
 from reportlab.pdfgen import canvas
@@ -41,13 +42,13 @@ class StudentExportWizard(osv.osv_memory):
             y -= 15
             pdf.drawString(100, y, "Email: {}".format(student.email or ''))
             y -= 15
-            pdf.drawString(100, y, "Telefono: {}".format(student.phone or ''))
+            pdf.drawString(100, y, "Teléfono: {}".format(student.phone or ''))
             y -= 15
             pdf.drawString(100, y, "Prefijo: {}".format(student.prefix or ''))
             y -= 15
             pdf.drawString(100, y, "Carnet: {}".format(student.student_card or ''))
             y -= 15
-            pdf.drawString(100, y, "Salon: {}".format(student.room_id.name or ''))
+            pdf.drawString(100, y, "Salón: {}".format(student.room_id.name or ''))
             y -= 20
 
             pdf.setFont("Helvetica-Bold", 12)

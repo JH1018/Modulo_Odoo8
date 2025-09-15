@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 from openerp.osv import osv, fields
 import base64
 from reportlab.pdfgen import canvas
@@ -62,8 +63,8 @@ class TeacherExportWizard(osv.osv_memory):
                     ("Nombre", safe_get(teacher, 'name')),
                     ("Edad", safe_get(teacher, 'age')),
                     ("Email", safe_get(teacher, 'email')),
-                    ("Telefono", safe_get(teacher, 'phone')),
-                    ("Direccion", safe_get(teacher, 'address')),
+                    ("Teléfono", safe_get(teacher, 'phone')),
+                    ("Dirección", safe_get(teacher, 'address')),
                 ]
 
                 for label, value in info_data:

@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 from openerp.osv import osv, fields
 from datetime import date
 
@@ -8,11 +9,11 @@ class GradeExamWizard(osv.osv_memory):
     _columns = {
         "exam_id": fields.many2one("odooeduconnect_exam", "Examen", required=True, ondelete='cascade'),
         "student_id": fields.many2one("odooeduconnect_student", "Estudiante", required=True, ondelete='cascade'),
-        "questions": fields.integer("Numero de preguntas", readonly=True),
+        "questions": fields.integer("Número de preguntas", readonly=True),
         "score": fields.integer("Puntuacion obtenida", readonly=True),
         "max_score": fields.integer("Puntuacion maxima", readonly=True),
         "percentage": fields.float("Porcentaje", readonly=True),
-        "date": fields.date("Fecha de calificacion"),
+        "date": fields.date("Fecha de calificación"),
         "calculation_detail": fields.text("Detalle del calculo", readonly=True),
     }
 
