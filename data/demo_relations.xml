@@ -18,11 +18,11 @@
         </record>
 
         <record id="room_salon_a" model="odooeduconnect_room">
-            <field name="students" eval="[(6, 0, [ref('student_ana_lopez'), ref('student_juan_perez'), ref('student_carla_martinez')])]"/>
+            <field name="students" eval="[(4, ref('student_ana_lopez')), (4, ref('student_juan_perez')), (4, ref('student_carla_martinez'))]"/>
         </record>
 
         <record id="room_salon_b" model="odooeduconnect_room">
-            <field name="students" eval="[(6, 0, [ref('student_carla_martinez'), ref('student_luis_ramirez'), ref('student_sofia_gutierrez')])]"/>
+            <field name="students" eval="[(4, ref('student_carla_martinez')), (4, ref('student_luis_ramirez')), (4, ref('student_sofia_gutierrez'))]"/>
         </record>
     </data>
 </openerp>
