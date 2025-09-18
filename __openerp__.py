@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 {
     'name': 'OdooEduConnect - Sistema de Gestión Educativa',
-    'version': '1.3.1',
+    'version': '1.3.2',
     'category': 'Education',
     'summary': 'Sistema integral de gestión educativa con exámenes, calificaciones y reportes',
     'description': """

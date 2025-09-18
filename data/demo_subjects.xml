@@ -4,6 +4,7 @@
         <record id="subject_matematicas" model="odooeduconnect_subject">
             <field name="name">Matematicas Basicas</field>
             <field name="code">MAT101</field>
+            <field name="lesson_time">8:00</field>
             <field name="description">Curso de matemáticas fundamentales para estudiantes de secundaria</field>
             <field name="teacher_id" ref="teacher_carlos_morales"/>
             <field name="room_id" ref="room_salon_a"/>
@@ -12,6 +13,7 @@
         <record id="subject_ciencias" model="odooeduconnect_subject">
             <field name="name">Ciencias Naturales</field>
             <field name="code">CIE102</field>
+            <field name="lesson_time">10:00</field>
             <field name="description">Introducción a las ciencias naturales y experimentales</field>
             <field name="teacher_id" ref="teacher_juan_herrera"/>
             <field name="room_id" ref="room_salon_b"/>
