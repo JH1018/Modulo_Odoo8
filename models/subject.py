@@ -8,6 +8,7 @@ class Subject(osv.osv):
     _columns = {
         "name": fields.char("Name", required=True, size=64),
         "code": fields.char("Code", required=True, size=10),
+        "lesson_time": fields.char("Lesson Time", required=True),
         "description": fields.text("Description"),
         "room_id": fields.many2one(
             'odooeduconnect_room', 

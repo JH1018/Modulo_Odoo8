@@ -1,0 +1,14 @@
+<openerp>
+    <data>
+        <record id="view_room_graph" model="ir.ui.view">
+            <field name="name">odooeduconnect.room.graph</field>
+            <field name="model">odooeduconnect_room</field>
+            <field name="arch" type="xml">
+                <graph string="Salones por Capacidad" type="bar">
+                    <field name="capacity" type="row"/>
+                    <field name="id" type="measure" operator="count"/>
+                </graph>
+            </field>
+        </record>
+    </data>
+</openerp>

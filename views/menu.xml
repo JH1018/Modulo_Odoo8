@@ -29,7 +29,7 @@
             <field name="name">Gestión de Maestros</field>
             <field name="res_model">odooeduconnect_teacher</field>
             <field name="view_type">form</field>
-            <field name="view_mode">tree,form</field>
+            <field name="view_mode">graph,tree,form</field>
             <field name="view_id" ref="view_teacher_tree_custom1"/>
             <field name="search_view_id" ref="Modulo_Odoo8.view_teacher_search_custom1"/>
             <field name="target">current</field>
@@ -41,12 +41,18 @@
             <field name="view_id" ref="view_teacher_form_custom1"/>
         </record>
 
+        <record id="action_administrador_graph_view_custom1_teacher" model="ir.actions.act_window.view">
+            <field name="act_window_id" ref="action_administrador_maestros"/>
+            <field name="view_mode">graph</field>
+            <field name="view_id" ref="view_teacher_graph"/>
+        </record>
+
         <!-- Acción Salones -->
         <record id="action_administrador_salon" model="ir.actions.act_window">
             <field name="name">Gestión de Salones</field>
             <field name="res_model">odooeduconnect_room</field>
             <field name="view_type">form</field>
-            <field name="view_mode">tree,form</field>
+            <field name="view_mode">graph,tree,form</field>
             <field name="view_id" ref="view_room_tree_custom1"/>
             <field name="search_view_id" ref="Modulo_Odoo8.view_room_search_custom1"/>
             <field name="target">current</field>
@@ -58,12 +64,18 @@
             <field name="view_id" ref="view_room_form_custom1"/>
         </record>
 
+        <record id="action_administrador_graph_view_custom1_salon" model="ir.actions.act_window.view">
+            <field name="act_window_id" ref="action_administrador_salon"/>
+            <field name="view_mode">graph</field>
+            <field name="view_id" ref="view_room_graph"/>
+        </record>
+
         <!-- Acción Clases -->
         <record id="action_administrador_clases" model="ir.actions.act_window">
             <field name="name">Gestión de Clases</field>
             <field name="res_model">odooeduconnect_subject</field>
             <field name="view_type">form</field>
-            <field name="view_mode">tree,form</field>
+            <field name="view_mode">graph,tree,form</field>
             <field name="view_id" ref="view_subject_tree_custom1"/>
             <field name="search_view_id" ref="Modulo_Odoo8.view_subject_search_custom1"/>
             <field name="target">current</field>
@@ -75,12 +87,18 @@
             <field name="view_id" ref="view_subject_form_custom1"/>
         </record>
 
+        <record id="action_administrador_graph_view_custom1_clases" model="ir.actions.act_window.view">
+            <field name="act_window_id" ref="action_administrador_clases"/>
+            <field name="view_mode">graph</field>
+            <field name="view_id" ref="view_subject_graph"/>
+        </record>
+
         <!-- Acción Notas -->
         <record id="action_administrador_notas" model="ir.actions.act_window">
             <field name="name">Gestión de Notas</field>
             <field name="res_model">odooeduconnect_grade</field>
             <field name="view_type">form</field>
-            <field name="view_mode">tree,form</field>
+            <field name="view_mode">graph,tree,form</field>
             <field name="view_id" ref="view_grade_tree_custom1"/>
             <field name="search_view_id" ref="Modulo_Odoo8.view_grade_search_custom1"/>
             <field name="target">current</field>
@@ -92,12 +110,18 @@
             <field name="view_id" ref="view_grade_form_custom1"/>
         </record>
 
+        <record id="action_administrador_graph_view_custom1_grades" model="ir.actions.act_window.view">
+            <field name="act_window_id" ref="action_administrador_notas"/>
+            <field name="view_mode">graph</field>
+            <field name="view_id" ref="view_grade_graph"/>
+        </record>
+
         <!-- Acción Examenes -->
         <record id="action_administrador_examenes" model="ir.actions.act_window">
             <field name="name">Gestión de Examenes</field>
             <field name="res_model">odooeduconnect_exam</field>
             <field name="view_type">form</field>
-            <field name="view_mode">tree,form</field>
+            <field name="view_mode">graph,tree,form</field>
             <field name="view_id" ref="view_exam_tree_custom1"/>
             <field name="search_view_id" ref="Modulo_Odoo8.view_exam_search_custom1"/>
             <field name="target">current</field>
@@ -107,6 +131,12 @@
             <field name="act_window_id" ref="action_administrador_examenes"/>
             <field name="view_mode">form</field>
             <field name="view_id" ref="view_exam_form_custom1"/>
+        </record>
+
+        <record id="action_administrador_graph_view_custom1_examenes" model="ir.actions.act_window.view">
+            <field name="act_window_id" ref="action_administrador_examenes"/>
+            <field name="view_mode">graph</field>
+            <field name="view_id" ref="view_exam_graph"/>
         </record>
 
         <!-- MENÚS -->
