@@ -56,7 +56,9 @@ Requisitos del Sistema:
     'depends': ['base'],
     'data': [ 'security/security.xml',
             'security/student_rules.xml', 
-            'security/ir.model.access.csv', 
+            'security/ir.model.access.csv',
+            
+            'views/students/studentGraph.xml',
             'views/exam/searchExam.xml', 
             'views/exam/registerExamView.xml', 
             'wizard/start_exam_wizard.xml', 

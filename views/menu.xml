@@ -6,7 +6,7 @@
             <field name="name">Gestión de Estudiantes</field>
             <field name="res_model">odooeduconnect_student</field>
             <field name="view_type">form</field>
-            <field name="view_mode">tree,form</field>
+            <field name="view_mode">graph,tree,form</field>
             <field name="view_id" ref="view_student_tree_custom1"/>
             <field name="search_view_id" ref="Modulo_Odoo8.view_student_search_custom1"/>
             <field name="target">current</field>
@@ -16,7 +16,13 @@
             <field name="act_window_id" ref="action_administrador"/>
             <field name="view_mode">form</field>
             <field name="view_id" ref="view_student_form_custom1"/>
-        </record>	
+        </record>
+
+        <record id="action_administrador_graph_view_custom1" model="ir.actions.act_window.view">
+            <field name="act_window_id" ref="action_administrador"/>
+            <field name="view_mode">graph</field>
+            <field name="view_id" ref="view_student_graph"/>
+        </record>
 
         <!-- Acción Maestros -->
         <record id="action_administrador_maestros" model="ir.actions.act_window">
@@ -141,6 +147,5 @@
         <menuitem id="submenu_examenes" name="Gestión de Exámenes" parent="submenu_examenes_principal"
                 action="action_administrador_examenes"
                 groups="Modulo_Odoo8.group_profesor,base.group_system,Modulo_Odoo8.group_estudiante"/>
-
     </data>
 </openerp>
