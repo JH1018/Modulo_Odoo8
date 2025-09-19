@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 {
     'name': 'OdooEduConnect - Sistema de Gestión Educativa',
-    'version': '1.0.1',
+    'version': '1.3.2',
     'category': 'Education',
     'summary': 'Sistema integral de gestión educativa con exámenes, calificaciones y reportes',
     'description': """
@@ -56,7 +56,14 @@ Requisitos del Sistema:
     'depends': ['base'],
     'data': [ 'security/security.xml',
             'security/student_rules.xml', 
-            'security/ir.model.access.csv', 
+            'security/ir.model.access.csv',
+            
+            'views/exam/examGraph.xml',
+            'views/grades/gradeGraph.xml',
+            'views/room/roomGraph.xml',
+            'views/subject/subjectGraph.xml',
+            'views/teacher/teacherGraph.xml',
+            'views/students/studentGraph.xml',
             'views/exam/searchExam.xml', 
             'views/exam/registerExamView.xml', 
             'wizard/start_exam_wizard.xml', 

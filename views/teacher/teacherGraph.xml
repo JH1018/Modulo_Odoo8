@@ -1,0 +1,15 @@
+<openerp>
+    <data>
+        <record id="view_teacher_graph" model="ir.ui.view">
+            <field name="name">odooeduconnect.teacher.graph</field>
+            <field name="model">odooeduconnect_teacher</field>
+            <field name="arch" type="xml">
+                <graph string="Profesores por Edad y Materias" type="bar">
+                    <field name="main_subject_id" type="row"/>
+                    <field name="age" type="col"/>
+                    <field name="id" type="measure" operator="count"/>
+                </graph>
+            </field>
+        </record>
+    </data>
+</openerp>

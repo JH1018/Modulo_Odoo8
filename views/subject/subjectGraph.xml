@@ -1,0 +1,15 @@
+<openerp>
+    <data>
+        <record id="view_subject_graph" model="ir.ui.view">
+            <field name="name">odooeduconnect.subject.graph</field>
+            <field name="model">odooeduconnect_subject</field>
+            <field name="arch" type="xml">
+                <graph string="Materias por Profesor y Salón" type="bar">
+                    <field name="teacher_id" type="row"/>
+                    <field name="room_id" type="row"/>
+                    <field name="id" type="measure" operator="count"/>
+                </graph>
+            </field>
+        </record>
+    </data>
+</openerp>

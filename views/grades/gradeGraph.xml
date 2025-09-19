@@ -1,0 +1,15 @@
+<openerp>
+    <data>
+        <record id="view_grade_graph" model="ir.ui.view">
+            <field name="name">odooeduconnect.grade.graph</field>
+            <field name="model">odooeduconnect_grade</field>
+            <field name="arch" type="xml">
+                <graph string="Calificaciones por Estudiante y Materia" type="bar">
+                    <field name="student_id" type="row"/>
+                    <field name="subject_id" type="col"/>
+                    <field name="score" type="measure"/>
+                </graph>
+            </field>
+        </record>
+    </data>
+</openerp>

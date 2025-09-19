@@ -1,0 +1,15 @@
+<openerp>
+    <data>
+        <record id="view_exam_graph" model="ir.ui.view">
+            <field name="name">odooeduconnect.exam.graph</field>
+            <field name="model">odooeduconnect_exam</field>
+            <field name="arch" type="xml">
+                <graph string="Exámenes por Fecha y Materia" type="bar">
+                    <field name="date" type="row"/>
+                    <field name="subject_id" type="col"/>
+                    <field name="id" type="measure" operator="count"/>
+                </graph>
+            </field>
+        </record>
+    </data>
+</openerp>

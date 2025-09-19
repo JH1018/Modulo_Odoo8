@@ -1,0 +1,16 @@
+<openerp>
+    <data>
+        <record id="view_student_graph" model="ir.ui.view">
+            <field name="name">odooeduconnect.student.graph</field>
+            <field name="model">odooeduconnect_student</field>
+            <field name="arch" type="xml">
+                <graph string="Alumnos por Grado, Sección y Salón" type="bar">
+                    <field name="section" type="row"/>
+                    <field name="grade" type="col"/>
+                    <field name="room_id" type="col"/>
+                    <field name="id" type="measure" operator="count"/>
+                </graph>
+            </field>
+        </record>
+    </data>
+</openerp>
