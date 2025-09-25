@@ -1,8 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <openerp>
     <data noupdate="1">
-        <!-- PRIMERA SEMANA DE SEPTIEMBRE 2025 -->
-        <!-- LUNES 1 DE SEPTIEMBRE -->
+        <!-- LUNES -->
         <record id="schedule_lunes_matematicas_8am" model="odooeduconnect_schedule">
             <field name="description">Matemáticas Básicas - Álgebra Elemental</field>
             <field name="start_time">2025-09-01 08:00:00</field>
@@ -38,7 +37,7 @@
             <field name="subject_id" ref="subject_educacion_fisica"/>
         </record>
 
-        <!-- MARTES 2 DE SEPTIEMBRE -->
+        <!-- MARTES -->
         <record id="schedule_martes_biologia_8am" model="odooeduconnect_schedule">
             <field name="description">Biología General - Sistema Circulatorio</field>
             <field name="start_time">2025-09-02 08:30:00</field>
@@ -74,7 +73,7 @@
             <field name="subject_id" ref="subject_arte"/>
         </record>
 
-        <!-- MIÉRCOLES 3 DE SEPTIEMBRE -->
+        <!-- MIÉRCOLES -->
         <record id="schedule_miercoles_matematicas_8am" model="odooeduconnect_schedule">
             <field name="description">Matemáticas Básicas - Geometría</field>
             <field name="start_time">2025-09-03 08:00:00</field>
@@ -110,7 +109,7 @@
             <field name="subject_id" ref="subject_educacion_fisica"/>
         </record>
 
-        <!-- JUEVES 4 DE SEPTIEMBRE -->
+        <!-- JUEVES -->
         <record id="schedule_jueves_biologia_8am" model="odooeduconnect_schedule">
             <field name="description">Biología General - Genética Básica</field>
             <field name="start_time">2025-09-04 08:30:00</field>
@@ -182,7 +181,7 @@
             <field name="subject_id" ref="subject_educacion_fisica"/>
         </record>
 
-        <!-- SÁBADO 6 DE SEPTIEMBRE (Horarios especiales y talleres) -->
+        <!-- SÁBADO -->
         <record id="schedule_sabado_quimica_lab_9am" model="odooeduconnect_schedule">
             <field name="description">Química General - Laboratorio Práctico</field>
             <field name="start_time">2025-09-06 09:00:00</field>
@@ -211,7 +210,7 @@
             <field name="subject_id" ref="subject_informatica"/>
         </record>
 
-        <!-- HORARIOS ADICIONALES SEGUNDA SEMANA (8-12 SEPTIEMBRE) -->
+        <!-- HORARIOS ADICIONALES -->
         <record id="schedule_lunes_matematicas_2pm" model="odooeduconnect_schedule">
             <field name="description">Matemáticas Básicas - Cálculo Diferencial</field>
             <field name="start_time">2025-09-08 14:00:00</field>
