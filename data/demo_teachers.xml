@@ -27,5 +27,77 @@
             <field name="password">temp123</field>
             <field name="phone">55533333</field>
         </record>
+
+        <record id="teacher_ana_martinez" model="odooeduconnect_teacher">
+            <field name="name">Ana Sofia Martinez Castro</field>
+            <field name="address">Calle Principal 156, Zona 4</field>
+            <field name="age">29</field>
+            <field name="email">ana.martinez@example.com</field>
+            <field name="password">temp123</field>
+            <field name="phone">5554444</field>
+        </record>
+
+        <record id="teacher_roberto_garcia" model="odooeduconnect_teacher">
+            <field name="name">Roberto Carlos Garcia Silva</field>
+            <field name="address">Boulevard Los Deportes 89, Zona 5</field>
+            <field name="age">45</field>
+            <field name="email">roberto.garcia@example.com</field>
+            <field name="password">temp123</field>
+            <field name="phone">5555555</field>
+        </record>
+
+        <record id="teacher_laura_rodriguez" model="odooeduconnect_teacher">
+            <field name="name">Laura Patricia Rodriguez Vega</field>
+            <field name="address">Avenida Las Ciencias 234, Zona 6</field>
+            <field name="age">33</field>
+            <field name="email">laura.rodriguez@example.com</field>
+            <field name="password">temp123</field>
+            <field name="phone">5556666</field>
+        </record>
+
+        <record id="teacher_miguel_torres" model="odooeduconnect_teacher">
+            <field name="name">Miguel Angel Torres Jimenez</field>
+            <field name="address">Calle de la Física 67, Zona 7</field>
+            <field name="age">41</field>
+            <field name="email">miguel.torres@example.com</field>
+            <field name="password">temp123</field>
+            <field name="phone">5557777</field>
+        </record>
+
+        <record id="teacher_sofia_mendez" model="odooeduconnect_teacher">
+            <field name="name">Sofia Elena Mendez Flores</field>
+            <field name="address">Plaza de las Letras 12, Zona 8</field>
+            <field name="age">36</field>
+            <field name="email">sofia.mendez@example.com</field>
+            <field name="password">temp123</field>
+            <field name="phone">5558888</field>
+        </record>
+
+        <record id="teacher_diego_castillo" model="odooeduconnect_teacher">
+            <field name="name">Diego Alejandro Castillo Moreno</field>
+            <field name="address">Calle del Arte 45, Zona 9</field>
+            <field name="age">28</field>
+            <field name="email">diego.castillo@example.com</field>
+            <field name="password">temp123</field>
+            <field name="phone">5559999</field>
+        </record>
+
+        <record id="teacher_alejandro_ruiz" model="odooeduconnect_teacher">
+            <field name="name">Alejandro David Ruiz Paredes</field>
+            <field name="address">Avenida Tecnológica 178, Zona 10</field>
+            <field name="age">31</field>
+            <field name="email">alejandro.ruiz@example.com</field>
+            <field name="password">temp123</field>
+            <field name="phone">5550000</field>
+        </record>
+
+        <record id="teacher_valeria_santos" model="odooeduconnect_teacher">
+            <field name="name">Valeria Isabel Santos Herrera</field>
+            <field name="address">Boulevard de la Vida 99, Zona 11</field>
+            <field name="age">34</field>
+            <field name="email">valeria.santos@example.com</field>
+            <field name="password">temp123</field>
+            <field name="phone">5551010</field>
+        </record>
     </data>
 </openerp>

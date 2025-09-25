@@ -1,0 +1,30 @@
+<openerp>
+    <data>
+        <record id="view_schedule_form_custom1" model="ir.ui.view">
+            <field name="name">schedule.form.custom1</field>
+            <field name="model">odooeduconnect_schedule</field>
+            <field name="arch" type="xml">
+                <form string="Horario">
+                    <sheet class="oe_form_sheet">
+                        <div class="oe_title">
+                            <label for="description" class="oe_edit_only"/>
+                            <h1>
+                                <field name="description" placeholder="Descripción del horario"/>
+                            </h1>
+                        </div>
+                        <group>
+                            <group string="Información General">
+                                <field name="subject_id" string="Materia"/>
+                            </group>
+                            <group string="Horario">
+                                <field name="start_time" string="Hora de Inicio"/>
+                                <field name="end_time" string="Hora de Fin"/>
+                            </group>
+                        </group>
+                        <div class="oe_clear"/>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+    </data>
+</openerp>

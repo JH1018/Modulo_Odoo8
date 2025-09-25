@@ -139,6 +139,35 @@
             <field name="view_id" ref="view_exam_graph"/>
         </record>
 
+        <!-- Acción Horarios -->
+        <record id="action_administrador_horarios" model="ir.actions.act_window">
+            <field name="name">Gestión de Horarios</field>
+            <field name="res_model">odooeduconnect_schedule</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">calendar,graph,tree,form</field>
+            <field name="view_id" ref="view_schedule_tree_custom1"/>
+            <field name="search_view_id" ref="Modulo_Odoo8.view_schedule_search_custom1"/>
+            <field name="target">current</field>
+        </record>
+
+        <record id="action_administrador_horarios_form_view_custom1" model="ir.actions.act_window.view">
+            <field name="act_window_id" ref="action_administrador_horarios"/>
+            <field name="view_mode">form</field>
+            <field name="view_id" ref="view_schedule_form_custom1"/>
+        </record>
+
+        <record id="action_administrador_graph_view_custom1_horarios" model="ir.actions.act_window.view">
+            <field name="act_window_id" ref="action_administrador_horarios"/>
+            <field name="view_mode">graph</field>
+            <field name="view_id" ref="view_schedule_graph"/>
+        </record>
+
+        <record id="action_administrador_calendar_view_custom1_horarios" model="ir.actions.act_window.view">
+            <field name="act_window_id" ref="action_administrador_horarios"/>
+            <field name="view_mode">calendar</field>
+            <field name="view_id" ref="view_schedule_calendar"/>
+        </record>
+
         <!-- MENÚS -->
         <menuitem id="menu_desplegable" name="Administración" sequence="1"/>
 
@@ -176,6 +205,12 @@
         <menuitem id="submenu_examenes_principal" name="Exámenes" parent="menu_desplegable"/>
         <menuitem id="submenu_examenes" name="Gestión de Exámenes" parent="submenu_examenes_principal"
                 action="action_administrador_examenes"
+                groups="Modulo_Odoo8.group_profesor,base.group_system,Modulo_Odoo8.group_estudiante"/>
+
+        <!-- Horarios -->
+        <menuitem id="submenu_horarios_principal" name="Horarios" parent="menu_desplegable"/>
+        <menuitem id="submenu_horarios" name="Gestión de Horarios" parent="submenu_horarios_principal"
+                action="action_administrador_horarios"
                 groups="Modulo_Odoo8.group_profesor,base.group_system,Modulo_Odoo8.group_estudiante"/>
     </data>
 </openerp>

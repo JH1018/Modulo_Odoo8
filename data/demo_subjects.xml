@@ -18,5 +18,86 @@
             <field name="teacher_id" ref="teacher_juan_herrera"/>
             <field name="room_id" ref="room_salon_b"/>
         </record>
+
+        <record id="subject_historia" model="odooeduconnect_subject">
+            <field name="name">Historia Universal</field>
+            <field name="code">HIS103</field>
+            <field name="lesson_time">14:00</field>
+            <field name="description">Estudio de los acontecimientos históricos más importantes de la humanidad</field>
+            <field name="teacher_id" ref="teacher_maria_lopez"/>
+            <field name="room_id" ref="room_salon_c"/>
+        </record>
+
+        <record id="subject_ingles" model="odooeduconnect_subject">
+            <field name="name">Inglés Intermedio</field>
+            <field name="code">ENG104</field>
+            <field name="lesson_time">9:00</field>
+            <field name="description">Desarrollo de habilidades de comunicación en inglés</field>
+            <field name="teacher_id" ref="teacher_ana_martinez"/>
+            <field name="room_id" ref="room_sala_idiomas"/>
+        </record>
+
+        <record id="subject_educacion_fisica" model="odooeduconnect_subject">
+            <field name="name">Educación Física</field>
+            <field name="code">EDF105</field>
+            <field name="lesson_time">15:00</field>
+            <field name="description">Desarrollo físico y coordinación motriz</field>
+            <field name="teacher_id" ref="teacher_roberto_garcia"/>
+            <field name="room_id" ref="room_gimnasio"/>
+        </record>
+
+        <record id="subject_quimica" model="odooeduconnect_subject">
+            <field name="name">Química General</field>
+            <field name="code">QUI106</field>
+            <field name="lesson_time">11:00</field>
+            <field name="description">Principios fundamentales de la química y experimentos básicos</field>
+            <field name="teacher_id" ref="teacher_laura_rodriguez"/>
+            <field name="room_id" ref="room_laboratorio_ciencias"/>
+        </record>
+
+        <record id="subject_fisica" model="odooeduconnect_subject">
+            <field name="name">Física Básica</field>
+            <field name="code">FIS107</field>
+            <field name="lesson_time">13:00</field>
+            <field name="description">Conceptos fundamentales de mecánica, ondas y electricidad</field>
+            <field name="teacher_id" ref="teacher_miguel_torres"/>
+            <field name="room_id" ref="room_laboratorio_fisica"/>
+        </record>
+
+        <record id="subject_literatura" model="odooeduconnect_subject">
+            <field name="name">Literatura Hispanoamericana</field>
+            <field name="code">LIT108</field>
+            <field name="lesson_time">12:00</field>
+            <field name="description">Análisis de obras literarias clásicas y contemporáneas</field>
+            <field name="teacher_id" ref="teacher_sofia_mendez"/>
+            <field name="room_id" ref="room_salon_d"/>
+        </record>
+
+        <record id="subject_arte" model="odooeduconnect_subject">
+            <field name="name">Artes Visuales</field>
+            <field name="code">ART109</field>
+            <field name="lesson_time">16:00</field>
+            <field name="description">Desarrollo de la creatividad y técnicas artísticas</field>
+            <field name="teacher_id" ref="teacher_diego_castillo"/>
+            <field name="room_id" ref="room_taller_arte"/>
+        </record>
+
+        <record id="subject_informatica" model="odooeduconnect_subject">
+            <field name="name">Informática Básica</field>
+            <field name="code">INF110</field>
+            <field name="lesson_time">10:30</field>
+            <field name="description">Fundamentos de computación y programación básica</field>
+            <field name="teacher_id" ref="teacher_alejandro_ruiz"/>
+            <field name="room_id" ref="room_laboratorio_computo"/>
+        </record>
+
+        <record id="subject_biologia" model="odooeduconnect_subject">
+            <field name="name">Biología General</field>
+            <field name="code">BIO111</field>
+            <field name="lesson_time">8:30</field>
+            <field name="description">Estudio de los seres vivos y sus procesos vitales</field>
+            <field name="teacher_id" ref="teacher_valeria_santos"/>
+            <field name="room_id" ref="room_laboratorio_biologia"/>
+        </record>
     </data>
 </openerp>

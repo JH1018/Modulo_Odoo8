@@ -1,0 +1,23 @@
+<openerp>
+    <data>
+        <record id="view_schedule_search_custom1" model="ir.ui.view">
+            <field name="name">schedule.search.custom1</field>
+            <field name="model">odooeduconnect_schedule</field>
+            <field name="arch" type="xml">
+                <search string="Buscar Horarios">
+                    <field name="description" string="Descripción"/>
+                    <field name="subject_id" string="Materia"/>
+                    <field name="start_time" string="Inicio"/>
+                    <field name="end_time" string="Fin"/>
+                    <filter string="Con Materia" name="has_subject" domain="[('subject_id','!=',False)]"/>
+                    <filter string="Sin Materia" name="no_subject" domain="[('subject_id','=',False)]"/>
+                    <separator/>
+                    <group expand="0" string="Agrupar por">
+                        <filter string="Materia" context="{'group_by':'subject_id'}"/>
+                        <filter string="Fecha de inicio" context="{'group_by':'start_time'}"/>
+                    </group>
+                </search>
+            </field>
+        </record>
+    </data>
+</openerp>
