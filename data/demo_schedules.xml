@@ -1,0 +1,263 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data noupdate="1">
+        <!-- LUNES -->
+        <record id="schedule_lunes_matematicas_8am" model="odooeduconnect_schedule">
+            <field name="description">Matemáticas Básicas - Álgebra Elemental</field>
+            <field name="start_time">2024-01-15 08:00:00</field>
+            <field name="end_time">2024-01-15 09:30:00</field>
+            <field name="subject_id" ref="subject_matematicas"/>
+        </record>
+
+        <record id="schedule_lunes_ingles_9am" model="odooeduconnect_schedule">
+            <field name="description">Inglés Intermedio - Grammar Review</field>
+            <field name="start_time">2024-01-15 09:45:00</field>
+            <field name="end_time">2024-01-15 11:15:00</field>
+            <field name="subject_id" ref="subject_ingles"/>
+        </record>
+
+        <record id="schedule_lunes_quimica_11am" model="odooeduconnect_schedule">
+            <field name="description">Química General - Tabla Periódica</field>
+            <field name="start_time">2024-01-15 11:30:00</field>
+            <field name="end_time">2024-01-15 13:00:00</field>
+            <field name="subject_id" ref="subject_quimica"/>
+        </record>
+
+        <record id="schedule_lunes_literatura_2pm" model="odooeduconnect_schedule">
+            <field name="description">Literatura Hispanoamericana - Modernismo</field>
+            <field name="start_time">2024-01-15 14:00:00</field>
+            <field name="end_time">2024-01-15 15:30:00</field>
+            <field name="subject_id" ref="subject_literatura"/>
+        </record>
+
+        <record id="schedule_lunes_educacion_fisica_3pm" model="odooeduconnect_schedule">
+            <field name="description">Educación Física - Básquetbol</field>
+            <field name="start_time">2024-01-15 15:45:00</field>
+            <field name="end_time">2024-01-15 17:15:00</field>
+            <field name="subject_id" ref="subject_educacion_fisica"/>
+        </record>
+
+        <!-- MARTES -->
+        <record id="schedule_martes_biologia_8am" model="odooeduconnect_schedule">
+            <field name="description">Biología General - Sistema Circulatorio</field>
+            <field name="start_time">2024-01-16 08:30:00</field>
+            <field name="end_time">2024-01-16 10:00:00</field>
+            <field name="subject_id" ref="subject_biologia"/>
+        </record>
+
+        <record id="schedule_martes_ciencias_10am" model="odooeduconnect_schedule">
+            <field name="description">Ciencias Naturales - Ecosistemas</field>
+            <field name="start_time">2024-01-16 10:15:00</field>
+            <field name="end_time">2024-01-16 11:45:00</field>
+            <field name="subject_id" ref="subject_ciencias"/>
+        </record>
+
+        <record id="schedule_martes_informatica_12pm" model="odooeduconnect_schedule">
+            <field name="description">Informática Básica - Introducción a Python</field>
+            <field name="start_time">2024-01-16 12:00:00</field>
+            <field name="end_time">2024-01-16 13:30:00</field>
+            <field name="subject_id" ref="subject_informatica"/>
+        </record>
+
+        <record id="schedule_martes_fisica_2pm" model="odooeduconnect_schedule">
+            <field name="description">Física Básica - Mecánica Clásica</field>
+            <field name="start_time">2024-01-16 14:00:00</field>
+            <field name="end_time">2024-01-16 15:30:00</field>
+            <field name="subject_id" ref="subject_fisica"/>
+        </record>
+
+        <record id="schedule_martes_arte_4pm" model="odooeduconnect_schedule">
+            <field name="description">Artes Visuales - Pintura al Óleo</field>
+            <field name="start_time">2024-01-16 16:00:00</field>
+            <field name="end_time">2024-01-16 17:30:00</field>
+            <field name="subject_id" ref="subject_arte"/>
+        </record>
+
+        <!-- MIÉRCOLES -->
+        <record id="schedule_miercoles_matematicas_8am" model="odooeduconnect_schedule">
+            <field name="description">Matemáticas Básicas - Geometría</field>
+            <field name="start_time">2024-01-17 08:00:00</field>
+            <field name="end_time">2024-01-17 09:30:00</field>
+            <field name="subject_id" ref="subject_matematicas"/>
+        </record>
+
+        <record id="schedule_miercoles_historia_10am" model="odooeduconnect_schedule">
+            <field name="description">Historia Universal - Revolución Industrial</field>
+            <field name="start_time">2024-01-17 10:00:00</field>
+            <field name="end_time">2024-01-17 11:30:00</field>
+            <field name="subject_id" ref="subject_historia"/>
+        </record>
+
+        <record id="schedule_miercoles_quimica_12pm" model="odooeduconnect_schedule">
+            <field name="description">Química General - Enlaces Químicos</field>
+            <field name="start_time">2024-01-17 12:00:00</field>
+            <field name="end_time">2024-01-17 13:30:00</field>
+            <field name="subject_id" ref="subject_quimica"/>
+        </record>
+
+        <record id="schedule_miercoles_ingles_2pm" model="odooeduconnect_schedule">
+            <field name="description">Inglés Intermedio - Conversation Practice</field>
+            <field name="start_time">2024-01-17 14:00:00</field>
+            <field name="end_time">2024-01-17 15:30:00</field>
+            <field name="subject_id" ref="subject_ingles"/>
+        </record>
+
+        <record id="schedule_miercoles_educacion_fisica_4pm" model="odooeduconnect_schedule">
+            <field name="description">Educación Física - Atletismo</field>
+            <field name="start_time">2024-01-17 16:00:00</field>
+            <field name="end_time">2024-01-17 17:30:00</field>
+            <field name="subject_id" ref="subject_educacion_fisica"/>
+        </record>
+
+        <!-- JUEVES -->
+        <record id="schedule_jueves_biologia_8am" model="odooeduconnect_schedule">
+            <field name="description">Biología General - Genética Básica</field>
+            <field name="start_time">2024-01-18 08:30:00</field>
+            <field name="end_time">2024-01-18 10:00:00</field>
+            <field name="subject_id" ref="subject_biologia"/>
+        </record>
+
+        <record id="schedule_jueves_fisica_10am" model="odooeduconnect_schedule">
+            <field name="description">Física Básica - Ondas y Sonido</field>
+            <field name="start_time">2024-01-18 10:15:00</field>
+            <field name="end_time">2024-01-18 11:45:00</field>
+            <field name="subject_id" ref="subject_fisica"/>
+        </record>
+
+        <record id="schedule_jueves_literatura_12pm" model="odooeduconnect_schedule">
+            <field name="description">Literatura Hispanoamericana - Boom Latinoamericano</field>
+            <field name="start_time">2024-01-18 12:00:00</field>
+            <field name="end_time">2024-01-18 13:30:00</field>
+            <field name="subject_id" ref="subject_literatura"/>
+        </record>
+
+        <record id="schedule_jueves_informatica_2pm" model="odooeduconnect_schedule">
+            <field name="description">Informática Básica - Bases de Datos</field>
+            <field name="start_time">2024-01-18 14:00:00</field>
+            <field name="end_time">2024-01-18 15:30:00</field>
+            <field name="subject_id" ref="subject_informatica"/>
+        </record>
+
+        <record id="schedule_jueves_ciencias_4pm" model="odooeduconnect_schedule">
+            <field name="description">Ciencias Naturales - Cambio Climático</field>
+            <field name="start_time">2024-01-18 16:00:00</field>
+            <field name="end_time">2024-01-18 17:30:00</field>
+            <field name="subject_id" ref="subject_ciencias"/>
+        </record>
+
+        <!-- VIERNES -->
+        <record id="schedule_viernes_matematicas_8am" model="odooeduconnect_schedule">
+            <field name="description">Matemáticas Básicas - Trigonometría</field>
+            <field name="start_time">2024-01-19 08:00:00</field>
+            <field name="end_time">2024-01-19 09:30:00</field>
+            <field name="subject_id" ref="subject_matematicas"/>
+        </record>
+
+        <record id="schedule_viernes_historia_10am" model="odooeduconnect_schedule">
+            <field name="description">Historia Universal - Guerras Mundiales</field>
+            <field name="start_time">2024-01-19 10:00:00</field>
+            <field name="end_time">2024-01-19 11:30:00</field>
+            <field name="subject_id" ref="subject_historia"/>
+        </record>
+
+        <record id="schedule_viernes_arte_12pm" model="odooeduconnect_schedule">
+            <field name="description">Artes Visuales - Escultura</field>
+            <field name="start_time">2024-01-19 12:00:00</field>
+            <field name="end_time">2024-01-19 13:30:00</field>
+            <field name="subject_id" ref="subject_arte"/>
+        </record>
+
+        <record id="schedule_viernes_ingles_2pm" model="odooeduconnect_schedule">
+            <field name="description">Inglés Intermedio - Writing Skills</field>
+            <field name="start_time">2024-01-19 14:00:00</field>
+            <field name="end_time">2024-01-19 15:30:00</field>
+            <field name="subject_id" ref="subject_ingles"/>
+        </record>
+
+        <record id="schedule_viernes_educacion_fisica_4pm" model="odooeduconnect_schedule">
+            <field name="description">Educación Física - Voleibol</field>
+            <field name="start_time">2024-01-19 16:00:00</field>
+            <field name="end_time">2024-01-19 17:30:00</field>
+            <field name="subject_id" ref="subject_educacion_fisica"/>
+        </record>
+
+        <!-- SÁBADO (Horarios especiales y talleres) -->
+        <record id="schedule_sabado_quimica_lab_9am" model="odooeduconnect_schedule">
+            <field name="description">Química General - Laboratorio Práctico</field>
+            <field name="start_time">2024-01-20 09:00:00</field>
+            <field name="end_time">2024-01-20 11:00:00</field>
+            <field name="subject_id" ref="subject_quimica"/>
+        </record>
+
+        <record id="schedule_sabado_fisica_lab_11am" model="odooeduconnect_schedule">
+            <field name="description">Física Básica - Experimentos de Mecánica</field>
+            <field name="start_time">2024-01-20 11:15:00</field>
+            <field name="end_time">2024-01-20 13:15:00</field>
+            <field name="subject_id" ref="subject_fisica"/>
+        </record>
+
+        <record id="schedule_sabado_biologia_lab_2pm" model="odooeduconnect_schedule">
+            <field name="description">Biología General - Microscopía</field>
+            <field name="start_time">2024-01-20 14:00:00</field>
+            <field name="end_time">2024-01-20 16:00:00</field>
+            <field name="subject_id" ref="subject_biologia"/>
+        </record>
+
+        <record id="schedule_sabado_informatica_taller_4pm" model="odooeduconnect_schedule">
+            <field name="description">Informática Básica - Taller de Programación</field>
+            <field name="start_time">2024-01-20 16:15:00</field>
+            <field name="end_time">2024-01-20 18:15:00</field>
+            <field name="subject_id" ref="subject_informatica"/>
+        </record>
+
+        <!-- HORARIOS ADICIONALES PARA COMPLETAR 35 -->
+        <record id="schedule_lunes_matematicas_2pm" model="odooeduconnect_schedule">
+            <field name="description">Matemáticas Básicas - Cálculo Diferencial</field>
+            <field name="start_time">2024-01-22 14:00:00</field>
+            <field name="end_time">2024-01-22 15:30:00</field>
+            <field name="subject_id" ref="subject_matematicas"/>
+        </record>
+
+        <record id="schedule_martes_historia_8am" model="odooeduconnect_schedule">
+            <field name="description">Historia Universal - Civilizaciones Antiguas</field>
+            <field name="start_time">2024-01-23 08:00:00</field>
+            <field name="end_time">2024-01-23 09:30:00</field>
+            <field name="subject_id" ref="subject_historia"/>
+        </record>
+
+        <record id="schedule_miercoles_biologia_lab_10am" model="odooeduconnect_schedule">
+            <field name="description">Biología General - Disección y Anatomía</field>
+            <field name="start_time">2024-01-24 10:00:00</field>
+            <field name="end_time">2024-01-24 12:00:00</field>
+            <field name="subject_id" ref="subject_biologia"/>
+        </record>
+
+        <record id="schedule_jueves_arte_taller_10am" model="odooeduconnect_schedule">
+            <field name="description">Artes Visuales - Taller de Cerámica</field>
+            <field name="start_time">2024-01-25 10:00:00</field>
+            <field name="end_time">2024-01-25 12:00:00</field>
+            <field name="subject_id" ref="subject_arte"/>
+        </record>
+
+        <record id="schedule_viernes_ciencias_lab_8am" model="odooeduconnect_schedule">
+            <field name="description">Ciencias Naturales - Experimentos Químicos Básicos</field>
+            <field name="start_time">2024-01-26 08:00:00</field>
+            <field name="end_time">2024-01-26 10:00:00</field>
+            <field name="subject_id" ref="subject_ciencias"/>
+        </record>
+
+        <record id="schedule_sabado_literatura_taller_10am" model="odooeduconnect_schedule">
+            <field name="description">Literatura Hispanoamericana - Taller de Escritura Creativa</field>
+            <field name="start_time">2024-01-27 10:00:00</field>
+            <field name="end_time">2024-01-27 12:00:00</field>
+            <field name="subject_id" ref="subject_literatura"/>
+        </record>
+
+        <record id="schedule_lunes_ingles_conversation_4pm" model="odooeduconnect_schedule">
+            <field name="description">Inglés Intermedio - Conversational Club</field>
+            <field name="start_time">2024-01-29 16:00:00</field>
+            <field name="end_time">2024-01-29 17:30:00</field>
+            <field name="subject_id" ref="subject_ingles"/>
+        </record>
+    </data>
+</openerp>

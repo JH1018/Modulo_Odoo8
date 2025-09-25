@@ -10,5 +10,55 @@
             <field name="name">Salon B</field>
             <field name="capacity">35</field>
         </record>
+
+        <record id="room_salon_c" model="odooeduconnect_room">
+            <field name="name">Salon C</field>
+            <field name="capacity">30</field>
+        </record>
+
+        <record id="room_salon_d" model="odooeduconnect_room">
+            <field name="name">Salon D</field>
+            <field name="capacity">32</field>
+        </record>
+
+        <record id="room_laboratorio_ciencias" model="odooeduconnect_room">
+            <field name="name">Laboratorio de Ciencias</field>
+            <field name="capacity">20</field>
+        </record>
+
+        <record id="room_laboratorio_fisica" model="odooeduconnect_room">
+            <field name="name">Laboratorio de Física</field>
+            <field name="capacity">18</field>
+        </record>
+
+        <record id="room_laboratorio_biologia" model="odooeduconnect_room">
+            <field name="name">Laboratorio de Biología</field>
+            <field name="capacity">22</field>
+        </record>
+
+        <record id="room_laboratorio_computo" model="odooeduconnect_room">
+            <field name="name">Laboratorio de Cómputo</field>
+            <field name="capacity">25</field>
+        </record>
+
+        <record id="room_sala_idiomas" model="odooeduconnect_room">
+            <field name="name">Sala de Idiomas</field>
+            <field name="capacity">28</field>
+        </record>
+
+        <record id="room_gimnasio" model="odooeduconnect_room">
+            <field name="name">Gimnasio</field>
+            <field name="capacity">50</field>
+        </record>
+
+        <record id="room_taller_arte" model="odooeduconnect_room">
+            <field name="name">Taller de Arte</field>
+            <field name="capacity">24</field>
+        </record>
+
+        <record id="room_auditorio" model="odooeduconnect_room">
+            <field name="name">Auditorio</field>
+            <field name="capacity">100</field>
+        </record>
     </data>
 </openerp>
