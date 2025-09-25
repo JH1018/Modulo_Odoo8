@@ -99,6 +99,7 @@ Requisitos del Sistema:
             
         ],
     'demo': [
+        'data/demo_schedules.xml',
         'data/demo_teachers.xml',
         'data/demo_students.xml',
         'data/demo_rooms.xml',
