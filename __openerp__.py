@@ -57,7 +57,11 @@ Requisitos del Sistema:
     'data': [ 'security/security.xml',
             'security/student_rules.xml', 
             'security/ir.model.access.csv',
-            
+            'views/schedule/calendarScheduleView.xml',
+            'views/schedule/registerScheduleView.xml',
+            'views/schedule/searchScheduleView.xml',
+            'views/schedule/tree_schedule.xml',
+            'views/schedule/scheduleGraph.xml',
             'views/exam/examGraph.xml',
             'views/grades/gradeGraph.xml',
             'views/room/roomGraph.xml',

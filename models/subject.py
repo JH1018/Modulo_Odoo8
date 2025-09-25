@@ -34,5 +34,10 @@ class Subject(osv.osv):
             'odooeduconnect_exam',
             'subject_id',
             'Exams'
-        )
+        ),
+        "schedule_ids": fields.one2many(
+            'odooeduconnect_schedule',
+            'subject_id',
+            'Schedules'
+        ),
     }

@@ -1,6 +1,7 @@
 # -*- coding: utf-8 -*-
 import student
 import subject
+import schedule
 import room
 import grade
 import teacher

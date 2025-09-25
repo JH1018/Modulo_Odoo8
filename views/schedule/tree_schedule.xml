@@ -1,0 +1,16 @@
+<openerp>
+    <data>
+        <record id="view_schedule_tree_custom1" model="ir.ui.view">
+            <field name="name">schedule.tree.custom1</field>
+            <field name="model">odooeduconnect_schedule</field>
+            <field name="arch" type="xml">
+                <tree string="Schedule">
+                    <field name="description"/>
+                    <field name="start_time"/>
+                    <field name="end_time"/>
+                    <field name="subject_id"/>
+                </tree>
+            </field>
+        </record>
+    </data>
+</openerp>

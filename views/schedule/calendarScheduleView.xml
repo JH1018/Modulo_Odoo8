@@ -1,0 +1,14 @@
+<openerp>
+    <data>
+        <record id="view_schedule_calendar" model="ir.ui.view">
+            <field name="name">odooeduconnect.schedule.calendar</field>
+            <field name="model">odooeduconnect_schedule</field>
+            <field name="arch" type="xml">
+                <calendar string="Horarios" date_start="start_time" date_stop="end_time" color="subject_id">
+                    <field name="description"/>
+                    <field name="subject_id"/>
+                </calendar>
+            </field>
+        </record>
+    </data>
+</openerp>

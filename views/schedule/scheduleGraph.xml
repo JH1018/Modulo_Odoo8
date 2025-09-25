@@ -1,0 +1,15 @@
+<openerp>
+    <data>
+        <record id="view_schedule_graph" model="ir.ui.view">
+            <field name="name">odooeduconnect.schedule.graph</field>
+            <field name="model">odooeduconnect_schedule</field>
+            <field name="arch" type="xml">
+                <graph string="Horarios por Materia y Fecha" type="bar">
+                    <field name="subject_id" type="row"/>
+                    <field name="start_time" type="col"/>
+                    <field name="id" type="measure" operator="count"/>
+                </graph>
+            </field>
+        </record>
+    </data>
+</openerp>
